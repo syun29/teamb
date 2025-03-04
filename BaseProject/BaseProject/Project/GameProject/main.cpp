@@ -7,7 +7,7 @@ void MainLoop(void) {
 	//ゲーム中はこの関数_を1秒間に60回呼び出している
 	//--------------------------------------------------------------
 	//ーーーー矢代ーーーー
-
+	ADD_RESOURCE("field", CImage::CreateImage("Image/Field.png" ));
 
 
 
