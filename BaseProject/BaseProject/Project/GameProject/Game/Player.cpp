@@ -31,7 +31,7 @@ Player::Player(const CVector2D& pos)
 
 	//プレイヤーの画像を読み込み
 	mp_image = CImage::CreateImage(
-		"AnimationSheet.png", //画像ファイルのパス
+		"Image/AnimationSheet.png", //画像ファイルのパス
 		ANIM_DATA, //アニメーションのデータ
 		CHIP_SIZE,CHIP_SIZE //1コマの幅と高さ
 	);
@@ -52,5 +52,6 @@ void Player::Update()
 //描画処理
 void Player::Render()
 {
+	mp_image->SetPos(m_pos);
 	mp_image->Draw();
 }
