@@ -1,5 +1,6 @@
+#include"Game/Player.h"
 
-
+Player* g_player = nullptr; //プレイヤーのポインタ
 
 void MainLoop(void) {
 	//--------------------------------------------------------------
