@@ -11,6 +11,15 @@
     <ClInclude Include="Game\Field.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="System\ObjectBase.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Task.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\TaskManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -23,6 +32,15 @@
     <ClCompile Include="Game\Field.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="System\ObjectBase.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Task.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\TaskManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -30,6 +48,9 @@
     </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{3ee1de57-f6cf-4383-a79e-7a4ebf0737b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{e6007379-cac4-4af6-871c-09fc40b7e098}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

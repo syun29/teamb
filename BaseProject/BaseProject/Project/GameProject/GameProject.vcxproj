@@ -23,12 +23,18 @@
     <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="System\ObjectBase.h" />
+    <ClInclude Include="System\Task.h" />
+    <ClInclude Include="System\TaskManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Enemy.cpp" />
     <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="System\ObjectBase.cpp" />
+    <ClCompile Include="System\Task.cpp" />
+    <ClCompile Include="System\TaskManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>
