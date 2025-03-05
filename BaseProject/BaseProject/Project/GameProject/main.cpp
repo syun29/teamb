@@ -1,6 +1,5 @@
 #include"Game/Player.h"
-
-Player* g_player = nullptr; //プレイヤーのポインタ
+#include"System/TaskManager.h"
 
 void MainLoop(void) {
 	//--------------------------------------------------------------
@@ -26,11 +25,11 @@ void MainLoop(void) {
 
 	//ーーーー大勝ーーーー
 
-	//プレイヤーの更新処理
-	g_player->Update();
+	//全タスクを更新
+	TaskManager::Instance()->Update();
 
-	//プレイヤーの描画処理
-	g_player->Render();
+	//全てのタスクを描画
+	TaskManager::Instance()->Render();
 
 
 
@@ -132,7 +131,7 @@ void Init(void)
 	//----大勝----
 
 	//プレイヤーを生成
-	g_player = new Player(
+	new Player(
 		CVector2D(SCREEN_WIDTH * 0.5f, SCREEN_HEIGHT * 0.5f));
 
 

@@ -52,6 +52,6 @@ void Player::Update()
 //•`‰æˆ—
 void Player::Render()
 {
-	mp_image->SetPos(m_pos);
+	mp_image->SetPos(CalcScreenPos());
 	mp_image->Draw();
 }

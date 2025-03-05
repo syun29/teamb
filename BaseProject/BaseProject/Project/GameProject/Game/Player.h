@@ -1,6 +1,7 @@
 #pragma once
+#include"../System/ObjectBase.h"
 
-class Player
+class Player:public ObjectBase
 {
 public:
 	//コンストラクタ
@@ -17,5 +18,4 @@ private:
 	static TexAnimData ANIM_DATA[];
 
 	CImage* mp_image; //プレイヤーの画像
-	CVector2D m_pos; //プレイヤーの座標
 };
