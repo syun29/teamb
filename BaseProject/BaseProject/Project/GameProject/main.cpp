@@ -11,7 +11,31 @@ void MainLoop(void) {
 	//ーーーー矢代ーーーー
 	//ADD_RESOURCE("field", CImage::CreateImage("Image/Field.png" ));
 	
-	
+	//enemyManagerのメンバー変数
+	static int time = 60 * 100;
+	time--;
+	static int enemyTimer = 60 * 3;
+		enemyTimer--; 
+		//enemyManagerのアップデート内
+	if (enemyTimer < 0) {
+		int enemyRand = rand() % 3;
+		switch (enemyRand)
+		{
+		case 1:
+			new Enemy(
+				CVector3D(1500.0f, 100.0f, 0.0f));
+			break;
+		case 2:
+			new Enemy(
+				CVector3D(1500.0f, 230.0f, 0.0f));
+			break;
+		case 3:
+			new Enemy(
+				CVector3D(1500.0f, 30.0f, 0.0f));
+			break;
+		}
+		enemyTimer = 60*3;
+	}
 
 
 
@@ -117,9 +141,28 @@ void Init(void)
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
 	//----矢代----
+	
+	 
+
+
+
+
+
+	
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/UFO.25.png"));
-	 new Enemy(
-		CVector3D( 1500.0f, 30.0f, 0.0f));
+	
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
