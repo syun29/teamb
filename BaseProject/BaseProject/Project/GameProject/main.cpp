@@ -31,7 +31,7 @@ void MainLoop(void) {
 			break;
 		case 3:
 			new Enemy(
-				CVector3D(1500.0f, 30.0f, 0.0f));
+				CVector3D(1500.0f, 300.0f, 0.0f));
 			break;
 		}
 		enemyTimer = 60*3;

@@ -6,7 +6,7 @@
 #define MOVE_SPEED_Y 3.0f 
 
 Enemy::Enemy(const CVector3D& pos)
-	:ObjectBase(pos),mp_image(nullptr)
+	:ObjectBase(pos)
 {
 	m_pos = pos;
 	m_img = COPY_RESOURCE("Enemy", CImage);

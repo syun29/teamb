@@ -17,5 +17,5 @@ public:
 private:
 	//static TexAnimData ANIM_DATA[];
 
-	CImage* mp_image; //プレイヤーの画像
+	//CImage* mp_image; //プレイヤーの画像
 };
