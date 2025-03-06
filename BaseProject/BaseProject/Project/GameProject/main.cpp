@@ -170,10 +170,11 @@ void Init(void)
 
 	//----‘åŸ----
 
+	ADD_RESOURCE("Player", CImage::CreateImage("Image/player.png",Player::ANIM_DATA,260,260));
+
 	//ƒvƒŒƒCƒ„[‚ğ¶¬
 	new Player(
-		CVector2D(SCREEN_WIDTH * 0.5f, SCREEN_HEIGHT * 0.5f));
-
+	CVector3D(1500.0f, 100.0f, 0.0f));
 
 
 

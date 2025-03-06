@@ -46,27 +46,22 @@ TexAnimData Player::ANIM_DATA[4] =
 };
 
 //コンストラクタ
-Player::Player(const CVector2D& pos)
-	:mp_image(nullptr)
+Player::Player(const CVector3D& pos)
+	:ObjectBase(pos)
 {
 	m_pos = pos;
 
 	//プレイヤーの画像を読み込み
-	mp_image = CImage::CreateImage
-	(
-		"Image/_______________.png", //画像ファイルのパス
-		ANIM_DATA, //アニメーションのデータ
-		CHIP_SIZE,CHIP_SIZE //1コマの幅と高さ
-	);
-	mp_image->ChangeAnimation(0);
-	mp_image->SetCenter(CENTER_POS);
+	m_img = COPY_RESOURCE("Player", CImage);
+	m_img.ChangeAnimation(0);
+	m_img.SetCenter(CENTER_POS);
 }
 
 //デストラクタ
 Player::~Player()
 {
 	//デストラクタ
-	delete mp_image;
+	//delete m_img;
 }
 
 //現在の状態を切り替え
@@ -87,7 +82,7 @@ bool Player::UpdateMove()
 	{
 		//左方向へ移動
 		m_pos.x -= MOVE_SPEED_X;
-		mp_image->SetFlipH(true);
+		m_img.SetFlipH(true);
 		isMove = true;
 	}
 	//右キーを押している間
@@ -95,7 +90,7 @@ bool Player::UpdateMove()
 	{
 		//右方向へ移動
 		m_pos.x += MOVE_SPEED_X;
-		mp_image->SetFlipH(false);
+		m_img.SetFlipH(false);
 		isMove = true;
 	}
 	//上キーを押している間
@@ -124,7 +119,7 @@ void Player::StateIdle()
 
 	//移動状態に合わせて、アニメーションを切り替え
 	EAnimType anim = isMove ? EAnimType::Move : EAnimType::Idle;
-	mp_image->ChangeAnimation((int)anim);
+	m_img.ChangeAnimation((int)anim);
 
 	//spaceキーでジャンプ状態へ移行
 	if (PUSH(CInput::eButton5))
@@ -164,7 +159,7 @@ void Player::StateJump()
 
 	//移動処理
 	bool isMove=UpdateMove();
-	mp_image->ChangeAnimation((int)EAnimType::Jump);
+	m_img.ChangeAnimation((int)EAnimType::Jump);
 }
 
 //死亡時の更新処理
@@ -175,13 +170,13 @@ void Player::StateDamage()
 	{
 		//ステップ0:ダメージアニメーションに切り替え
 	case 0:
-		mp_image->ChangeAnimation((int)EAnimType::Damage, false);
+		m_img.ChangeAnimation((int)EAnimType::Damage, false);
 		m_stateStep++;
 		break;
 		//ステップ1:アニメーション終了待ち
 	case 1:
 		//攻撃アニメーションが終了したら、待機状態へ移行
-		if (mp_image->CheckAnimationEnd())
+		if (m_img.CheckAnimationEnd())
 		{
 			ChangeState(EState::Idle);
 		}
@@ -214,12 +209,12 @@ void Player::Update()
 	}
 
 	//イメージに座標を設定して、アニメーションを更新
-	mp_image->SetPos(CalcScreenPos());
-	mp_image->UpdateAnimation();
+	m_img.SetPos(CalcScreenPos());
+	m_img.UpdateAnimation();
 }
 
 //描画処理
 void Player::Render()
 {
-	mp_image->Draw();
+	m_img.Draw();
 }

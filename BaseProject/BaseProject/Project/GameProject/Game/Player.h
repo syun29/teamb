@@ -5,7 +5,7 @@ class Player:public ObjectBase
 {
 public:
 	//コンストラクタ
-	Player(const CVector2D& pos);
+	Player(const CVector3D& pos);
 	//デストラクタ
 	~Player();
 
@@ -13,6 +13,9 @@ public:
 	void Update();
 	//描画処理
 	void Render();
+
+	CImage m_img;
+	static TexAnimData ANIM_DATA[];
 
 private:
 	//状態
@@ -47,8 +50,6 @@ private:
 
 		Num,
 	};
-	static TexAnimData ANIM_DATA[];
-	CImage* mp_image;	//プレイヤーの画像
 
 	float m_moveSpeedY;	//Y軸(高さ)の移動速度
 };
