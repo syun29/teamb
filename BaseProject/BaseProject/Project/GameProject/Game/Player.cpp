@@ -4,7 +4,8 @@
 #define CENTER_POS CVector2D(128.0f,128.0f) //中心座標
 #define MOVE_SPEED_X 3.0f //横方向の移動速度
 #define MOVE_SPEED_Z 3.0f //奥方向の移動速度
-#define MOVE_SPEED 15.0f	//重力
+#define JUMP_SPEED 15.0f	// ジャンプ速度
+#define GRAVITY	-1.0F	//重力
 
 //プレイヤーのアニメーションデータの前宣言
 TexAnimData Player::ANIM_DATA[4] =
@@ -13,7 +14,7 @@ TexAnimData Player::ANIM_DATA[4] =
 	{
 		new TexAnim[2]
 	{
-		{15,6},{16,6},
+		{15,12},{16,12},
 	},
 	2
 },
@@ -67,7 +68,7 @@ Player::~Player()
 	delete mp_image;
 }
 
-
+//現在の状態を切り替え
 void Player::ChangeState(EState state)
 {
 	if (m_state == state) return;
@@ -76,6 +77,7 @@ void Player::ChangeState(EState state)
 	m_stateStep = 0;
 }
 
+//移動処理の更新
 bool Player::UpdateMove()
 {
 	bool isMove = false;
@@ -106,7 +108,7 @@ bool Player::UpdateMove()
 	else if (HOLD(CInput::eDown))
 	{
 		//手前方向へ移動
-		m_pos.z -= MOVE_SPEED_Z;
+		m_pos.z += MOVE_SPEED_Z;
 		isMove = true;
 	}
 
@@ -130,14 +132,36 @@ void Player::StateIdle()
 	}
 }
 
-void Player::StateRun()
-{
-}
-
+//ジャンプ中の更新処理
 void Player::StateJump()
 {
+	//ステップごとに処理を切り替え
+	switch (m_stateStep)
+	{
+		//ステップ0:ジャンプ開始
+	case 0:
+		//Y軸(高さ)の移動速度にジャンプ速度を設定し、
+		//接地状態を解除する
+		m_moveSpeedY = JUMP_SPEED;
+		m_isGrounded = false;
+		m_stateStep++;
+		break;
+		//ステップ1:ジャンプ終了
+	case 1:
+		//接地したら、待機状態へ移行
+		if (m_isGrounded)
+		{
+			ChangeState(EState::Idle);
+		}
+		break;
+	}
+
+	//移動処理
+	bool isMove=UpdateMove();
+	mp_image->ChangeAnimation((int)EAnimType::Jump);
 }
 
+//死亡時の更新処理
 void Player::StateDeath()
 {
 }
@@ -145,11 +169,33 @@ void Player::StateDeath()
 //更新処理
 void Player::Update()
 {
+	//現在の状態に合わせて、処理を切り替える
+	switch (m_state)
+	{
+	case EState::Idle:		StateIdle();	break;
+	case EState::Jump:		StateJump();	break;
+	case EState::Death:		StateDeath();	break;
+	}
+
+	//Y軸(高さ)の移動を座標に反映
+	m_pos.y += m_moveSpeedY;
+	m_moveSpeedY += GRAVITY;	//Y軸の移動速度に重力を加算
+	//地面より下にいくと
+	if (m_pos.y <= 0.0f)
+	{
+		//地面の座標へ戻す
+		m_pos.y = 0.0f;
+		m_moveSpeedY = 0.0f;
+		m_isGrounded = true;
+	}
+
+	//イメージに座標を設定して、アニメーションを更新
+	mp_image->SetPos(CalcScreenPos());
+	mp_image->UpdateAnimation();
 }
 
 //描画処理
 void Player::Render()
 {
-	mp_image->SetPos(CalcScreenPos());
 	mp_image->Draw();
 }
