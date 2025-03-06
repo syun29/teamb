@@ -5,7 +5,7 @@ class Enemy :public ObjectBase
 {
 public:
 	//コンストラクタ
-	Enemy(const CVector2D& pos);
+	Enemy(const CVector3D& pos);
 	//デストラクタ
 	~Enemy();
 
@@ -13,9 +13,9 @@ public:
 	void Update();
 	//描画処理
 	void Render();
-
+	CImage m_img;
 private:
-	static TexAnimData ANIM_DATA[];
+	//static TexAnimData ANIM_DATA[];
 
 	CImage* mp_image; //プレイヤーの画像
 };
