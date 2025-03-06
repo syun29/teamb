@@ -39,7 +39,7 @@ TexAnimData Player::ANIM_DATA[4] =
 	{
 		new TexAnim[2]
 	{
-		{10,6},{11,6},
+		{10,12},{11,12},
 	},
 	2
 },
@@ -52,7 +52,8 @@ Player::Player(const CVector2D& pos)
 	m_pos = pos;
 
 	//プレイヤーの画像を読み込み
-	mp_image = CImage::CreateImage(
+	mp_image = CImage::CreateImage
+	(
 		"Image/_______________.png", //画像ファイルのパス
 		ANIM_DATA, //アニメーションのデータ
 		CHIP_SIZE,CHIP_SIZE //1コマの幅と高さ
@@ -130,6 +131,11 @@ void Player::StateIdle()
 	{
 		ChangeState(EState::Jump);
 	}
+
+	else if (PUSH(CInput::eButton1))
+	{
+		ChangeState(EState::Damage);
+	}
 }
 
 //ジャンプ中の更新処理
@@ -162,8 +168,26 @@ void Player::StateJump()
 }
 
 //死亡時の更新処理
-void Player::StateDeath()
+void Player::StateDamage()
 {
+	//ステップごとに処理を切り替え
+	switch (m_stateStep)
+	{
+		//ステップ0:ダメージアニメーションに切り替え
+	case 0:
+		mp_image->ChangeAnimation((int)EAnimType::Damage, false);
+		m_stateStep++;
+		break;
+		//ステップ1:アニメーション終了待ち
+	case 1:
+		//攻撃アニメーションが終了したら、待機状態へ移行
+		if (mp_image->CheckAnimationEnd())
+		{
+			ChangeState(EState::Idle);
+		}
+		break;
+	}
+	
 }
 
 //更新処理
@@ -174,7 +198,7 @@ void Player::Update()
 	{
 	case EState::Idle:		StateIdle();	break;
 	case EState::Jump:		StateJump();	break;
-	case EState::Death:		StateDeath();	break;
+	case EState::Damage:		StateDamage();	break;
 	}
 
 	//Y軸(高さ)の移動を座標に反映
