@@ -1,5 +1,7 @@
 #include"Game/Player.h"
 #include"System/TaskManager.h"
+#include"Game/Enemy.h"
+Enemy* g_enemy = nullptr;
 
 void MainLoop(void) {
 	//--------------------------------------------------------------
@@ -8,11 +10,8 @@ void MainLoop(void) {
 	//--------------------------------------------------------------
 	//ーーーー矢代ーーーー
 	//ADD_RESOURCE("field", CImage::CreateImage("Image/Field.png" ));
-
-
-
-
-
+	
+	
 
 
 
@@ -118,11 +117,9 @@ void Init(void)
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
 	//----矢代----
-
-
-
-
-
+	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/UFO.25.png"));
+	 new Enemy(
+		CVector3D( 1500.0f, 30.0f, 0.0f));
 
 
 
