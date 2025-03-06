@@ -19,7 +19,6 @@ private:
 	enum class EState
 	{
 		Idle,	//待機状態
-		Run,	//移動
 		Jump,	//ジャンプ中
 		Death,	//死亡
 	};
@@ -30,8 +29,6 @@ private:
 
 	//待機中の更新処理
 	void StateIdle();
-	//移動中の更新処理
-	void StateRun();
 	//ジャンプ中の更新処理
 	void StateJump();
 	//死亡時の更新処理
