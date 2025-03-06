@@ -15,7 +15,43 @@ public:
 	void Render();
 
 private:
-	static TexAnimData ANIM_DATA[];
+	//状態
+	enum class EState
+	{
+		Idle,	//待機状態
+		Run,	//移動
+		Jump,	//ジャンプ中
+		Death,	//死亡
+	};
+	void ChangeState(EState state);
 
-	CImage* mp_image; //プレイヤーの画像
+	//移動処理の更新
+	bool UpdateMove();
+
+	//待機中の更新処理
+	void StateIdle();
+	//移動中の更新処理
+	void StateRun();
+	//ジャンプ中の更新処理
+	void StateJump();
+	//死亡時の更新処理
+	void StateDeath();
+
+	EState m_state;
+	int m_stateStep;
+
+	//アニメーションの種類
+	enum class EAnimType
+	{
+		Idle,	//待機
+		Move,	//移動
+		Jump,	//ジャンプ
+		Death,	//死亡
+
+		Num,
+	};
+	static TexAnimData ANIM_DATA[];
+	CImage* mp_image;	//プレイヤーの画像
+
+	float m_moveSpeedY;	//Y軸(高さ)の移動速度
 };
