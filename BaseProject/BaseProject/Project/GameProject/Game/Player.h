@@ -20,7 +20,7 @@ private:
 	{
 		Idle,	//待機状態
 		Jump,	//ジャンプ中
-		Death,	//死亡
+		Damage,	//ダメージ
 	};
 	void ChangeState(EState state);
 
@@ -31,8 +31,8 @@ private:
 	void StateIdle();
 	//ジャンプ中の更新処理
 	void StateJump();
-	//死亡時の更新処理
-	void StateDeath();
+	//ダメージ時の更新処理
+	void StateDamage();
 
 	EState m_state;
 	int m_stateStep;
@@ -43,7 +43,7 @@ private:
 		Idle,	//待機
 		Move,	//移動
 		Jump,	//ジャンプ
-		Death,	//死亡
+		Damage,	//ダメージ
 
 		Num,
 	};
