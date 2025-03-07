@@ -212,7 +212,7 @@ void Player::Update()
 	m_img.SetPos(CalcScreenPos());
 	m_img.UpdateAnimation();
 	//
-	m_scroll.x = m_pos.x - 1280;
+	m_scroll.x = m_pos.x - 1280/2;
 }
 
 //•`‰æˆ—

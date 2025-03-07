@@ -6,7 +6,7 @@ class Field:public ObjectBase
 private:
 	int m_pos;
 public:
-	 Field(const CVector3D&npos);
+	 Field(const CVector3D& pos);
 
 	void Update();
 	void Render();

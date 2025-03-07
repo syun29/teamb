@@ -16,7 +16,7 @@ void Field::Render()
 	float sc;
 	m_backGround.Draw();
 
-	sc = m_scroll.x;
+	sc = m_scroll.x/2;
 	m_ground.SetRect(sc, 0, sc + 720, 203);
 	m_ground.Draw();
 	m_ground.SetSize(720 * 3, 203 * 3);
