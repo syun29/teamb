@@ -1,7 +1,7 @@
 #pragma once
-#include"../System/ObjectBase.h"
+#include"../System/Task.h"
 
-class Field:public ObjectBase
+class Field:public Task
 {
 private:
 	int m_pos;

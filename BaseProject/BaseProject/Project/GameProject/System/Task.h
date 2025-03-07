@@ -8,6 +8,7 @@ enum class ETaskPrio
 	Field, //フィールド
 	Shadow, //影
 	Object, //オブジェクト（プレイヤーとか敵とか）
+	UI,
 };
 class Task
 {

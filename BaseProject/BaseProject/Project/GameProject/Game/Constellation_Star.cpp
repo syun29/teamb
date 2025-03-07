@@ -36,7 +36,7 @@ void Constellation_Star::Update()
 {
 	if (PUSH(CInput::eButton2))
 	{
-		score + 100;
+		score += 100;
 	}
 }
 

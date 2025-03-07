@@ -25,6 +25,7 @@
     <ClInclude Include="Game\EnemyManager.h" />
     <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="Game\SterManager.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="System\ObjectBase.h" />
     <ClInclude Include="System\StarBase.h" />
@@ -39,6 +40,7 @@
     <ClCompile Include="Game\EnemyManager.cpp" />
     <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="Game\Player.cpp" />
+    <ClCompile Include="Game\SterManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="System\ObjectBase.cpp" />
     <ClCompile Include="System\StarBase.cpp" />
