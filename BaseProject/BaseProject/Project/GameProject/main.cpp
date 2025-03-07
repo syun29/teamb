@@ -3,6 +3,7 @@
 #include"Game/Enemy.h"
 #include "Game/EnemyManager.h"
 #include"Game/Field.h"
+#include"UI/Score.h"
 Enemy* g_enemy = nullptr;
 
 void MainLoop(void) {
@@ -125,8 +126,9 @@ void Init(void)
 
 
 
+	ADD_RESOURCE("Score", CImage::CreateImage("Image/Score01.png"));
+	new Score(CVector2D(1700,300));
 
-	
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/UFO.25.png"));
 	
 	

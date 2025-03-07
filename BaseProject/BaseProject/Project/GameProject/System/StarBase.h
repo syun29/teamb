@@ -11,8 +11,8 @@ public:
 	// デストラクタ
 	virtual ~StarBase();
 
-	
+	void TakeScore();
 
 protected:
-	
+	int score;
 };
