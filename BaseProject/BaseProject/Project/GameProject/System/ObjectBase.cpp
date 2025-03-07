@@ -48,7 +48,8 @@ CVector2D ObjectBase::CalcScreenPos(bool grounded) const
 	CVector2D ret;
 
 	// XÀ•W‚Í‚»‚Ì‚Ü‚Üİ’è
-	ret.x = m_pos.x;
+	ret.x = m_pos.x-m_scroll.x;
+	
 	// ’ÊíÀ•W‚ğ‹‚ß‚éê‡
 	if (!grounded)
 	{
