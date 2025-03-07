@@ -26,6 +26,7 @@
     <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="System\Nomal.h" />
     <ClInclude Include="System\ObjectBase.h" />
     <ClInclude Include="System\StarBase.h" />
     <ClInclude Include="System\Task.h" />
@@ -40,6 +41,7 @@
     <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="System\Nomal.cpp" />
     <ClCompile Include="System\ObjectBase.cpp" />
     <ClCompile Include="System\StarBase.cpp" />
     <ClCompile Include="System\Task.cpp" />
