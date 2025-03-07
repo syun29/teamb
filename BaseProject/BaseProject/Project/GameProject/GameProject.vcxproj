@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game\Constellation.h" />
+    <ClInclude Include="Game\Constellation_Star.h" />
     <ClInclude Include="Game\Enemy.h" />
     <ClInclude Include="Game\EnemyManager.h" />
     <ClInclude Include="Game\Field.h" />
@@ -28,8 +30,11 @@
     <ClInclude Include="System\StarBase.h" />
     <ClInclude Include="System\Task.h" />
     <ClInclude Include="System\TaskManager.h" />
+    <ClInclude Include="UI\Score.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game\Constellation.cpp" />
+    <ClCompile Include="Game\Constellation_Star.cpp" />
     <ClCompile Include="Game\Enemy.cpp" />
     <ClCompile Include="Game\EnemyManager.cpp" />
     <ClCompile Include="Game\Field.cpp" />
@@ -39,6 +44,7 @@
     <ClCompile Include="System\StarBase.cpp" />
     <ClCompile Include="System\Task.cpp" />
     <ClCompile Include="System\TaskManager.cpp" />
+    <ClCompile Include="UI\Score.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>
