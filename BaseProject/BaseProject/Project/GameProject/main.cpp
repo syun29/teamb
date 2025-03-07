@@ -1,10 +1,10 @@
 #include"Game/Player.h"
-#include"UI/Score.h"
 #include"System/TaskManager.h"
 #include"Game/Enemy.h"
 #include "Game/EnemyManager.h"
-#include"Game/Constellation_Star.h"
 #include"Game/Field.h"
+#include"UI/Score.h"
+#include"System/Nomal.h"
 Enemy* g_enemy = nullptr;
 
 void MainLoop(void) {
@@ -123,10 +123,8 @@ void Init(void)
 	//----ñÓë„----
 	
 	 
-	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/background.png"));
-	ADD_RESOURCE("Ground", CImage::CreateImage("Image/ground.png"));
-	new Field(
-		CVector3D(1500.0f, 100.0f, 0.0f));
+
+
 
 
 	ADD_RESOURCE("Score", CImage::CreateImage("Image/Score01.png"));
@@ -137,13 +135,11 @@ void Init(void)
 	
 	new EnemyManager;
 
-	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri.png"));
-	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad.png"));
-	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta.png"));
 
-	new Constellation_Star(CVector3D(1000.0f, 500.0f, 0.0f),0);
-	new Constellation_Star(CVector3D(800.0f, 100.0f, 0.0f), 1);
-	new Constellation_Star(CVector3D(500.0f, 150.0f, 0.0f), 2);
+
+
+
+
 
 
 
@@ -155,14 +151,15 @@ void Init(void)
 
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/player.png",Player::ANIM_DATA,260,260));
 
-	
+	ADD_RESOURCE("Nomal", CImage::CreateImage("Image/nomalstar.png"));
+
 
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨
 	new Player(
 	CVector3D(1500.0f, 100.0f, 0.0f));
 
-	
-
+	new Nomal(
+		CVector3D(100.0f, 100.0f, 0.0f));
 
 
 
