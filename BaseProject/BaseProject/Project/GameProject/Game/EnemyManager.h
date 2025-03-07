@@ -1,6 +1,8 @@
 #pragma once
+#include"../System/ObjectBase.h"
 
-class EnemyManager
+
+class EnemyManager:public ObjectBase
 {
 public:
 	EnemyManager();

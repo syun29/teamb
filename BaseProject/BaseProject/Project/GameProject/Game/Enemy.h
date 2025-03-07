@@ -16,6 +16,6 @@ public:
 	CImage m_img;
 private:
 	//static TexAnimData ANIM_DATA[];
-
+	void EnemyCollision();
 	//CImage* mp_image; //ƒvƒŒƒCƒ„[‚Ì‰æ‘œ
 };

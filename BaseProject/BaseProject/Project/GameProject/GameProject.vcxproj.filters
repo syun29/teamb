@@ -23,6 +23,9 @@
     <ClInclude Include="Game\EnemyManager.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="System\StarBase.h">
+      <Filter>System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -46,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="Game\EnemyManager.cpp">
       <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="System\StarBase.cpp">
+      <Filter>System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
