@@ -2,8 +2,8 @@
 
 #define CHIP_SIZE 260 //1コマのサイズ
 #define CENTER_POS CVector2D(128.0f,128.0f) //中心座標
-#define MOVE_SPEED_X 13.0f //横方向の移動速度
-#define MOVE_SPEED_Z 13.0f //奥方向の移動速度
+#define MOVE_SPEED_X 3.0f //横方向の移動速度
+#define MOVE_SPEED_Z 3.0f //奥方向の移動速度
 #define JUMP_SPEED 15.0f	// ジャンプ速度
 #define GRAVITY	-1.0F	//重力
 
@@ -218,6 +218,6 @@ void Player::Update()
 //描画処理
 void Player::Render()
 {
-	//m_img.SetPos(GetScreenPos(m_pos));
+	//m_img.SetPos(ClacScreenPos(m_pos));
 	m_img.Draw();
 }
