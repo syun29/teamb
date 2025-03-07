@@ -211,10 +211,13 @@ void Player::Update()
 	//イメージに座標を設定して、アニメーションを更新
 	m_img.SetPos(CalcScreenPos());
 	m_img.UpdateAnimation();
+	//
+	m_scroll.x = m_pos.x - 1280;
 }
 
 //描画処理
 void Player::Render()
 {
+	//m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 }

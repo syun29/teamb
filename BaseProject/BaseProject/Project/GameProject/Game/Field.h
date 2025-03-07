@@ -1,12 +1,16 @@
 #pragma once
+#include"../System/ObjectBase.h"
 
-class Field
+class Field:public ObjectBase
 {
 private:
-	CImage m_field;
 	int m_pos;
 public:
-	 Field();
+	 Field(const CVector3D&npos);
+
 	void Update();
-	void Draw();
+	void Render();
+
+	CImage m_backGround;
+	CImage m_ground;
 };

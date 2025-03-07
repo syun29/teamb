@@ -1,6 +1,7 @@
 #include "ObjectBase.h"
 #define FIELD_CENTER_Z (SCREEN_HEIGHT * 0.75f)
 
+CVector3D ObjectBase::m_scroll(0, 0, 0);
 // コンストラクタ
 ObjectBase::ObjectBase()
 	: ObjectBase(CVector3D::zero)
@@ -71,4 +72,9 @@ void ObjectBase::RenderShadow()
 	// 影を地面の位置で描画
 	mp_shadowImg->SetPos(CalcScreenPos(true));
 	mp_shadowImg->Draw();
+}
+
+CVector3D ObjectBase::GetScreenPos(const CVector3D& pos)
+{
+	return pos - m_scroll;
 }

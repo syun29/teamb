@@ -1,15 +1,24 @@
 #include "Field.h"
 
-Field::Field()
+Field::Field(const CVector3D& pos)
+	:ObjectBase()
 {
-	m_field = COPY_RESOURCE("field", CImage);
+	m_backGround = COPY_RESOURCE("BackGround", CImage);
+	m_ground = COPY_RESOURCE("Ground", CImage);
 }
 void Field::Update()
 {
 
 }
 
-void Field::Draw()
+void Field::Render()
 {
-	m_field.Draw();
+	float sc;
+	m_backGround.Draw();
+
+	sc = m_scroll.x;
+	m_ground.SetRect(sc, 0, sc + 720, 203);
+	m_ground.Draw();
+	m_ground.SetSize(720 * 3, 203 * 3);
+	m_ground.SetPos(0, 450);
 }
