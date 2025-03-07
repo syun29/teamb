@@ -153,8 +153,6 @@ void Init(void)
 
 	ADD_RESOURCE("Nomal", CImage::CreateImage("Image/nomalstar.png"));
 
-	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/background.png"));
-	ADD_RESOURCE("Ground", CImage::CreateImage("Image/ground.png"));
 
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨
 	new Player(
@@ -162,10 +160,6 @@ void Init(void)
 
 	new Nomal(
 		CVector3D(100.0f, 100.0f, 0.0f));
-
-	new Field(
-		CVector3D(1500.0f, 100.0f, 0.0f));
-
 
 
 

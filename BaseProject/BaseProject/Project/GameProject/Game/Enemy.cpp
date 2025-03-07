@@ -23,11 +23,13 @@ Enemy::~Enemy()
 void Enemy::Update()
 {
 	m_pos.x -= 5;
+
 }
 
 void Enemy::Render()
 {
-	
+	//m_img.SetPos(GetScreenPos(m_pos));
+
 	m_img.SetPos(CalcScreenPos());
 	m_img.Draw();
 	//mp_image->Draw();

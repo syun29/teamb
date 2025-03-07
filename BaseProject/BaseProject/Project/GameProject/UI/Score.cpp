@@ -10,10 +10,7 @@ Score::Score(const CVector2D& p)
 
 void Score::Update()
 {
-	if (PUSH(CInput::eButton5))
-	{
-		score += 100;
-	}
+	
 }
 
 void Score::Render()
