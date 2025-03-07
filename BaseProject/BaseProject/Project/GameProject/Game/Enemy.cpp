@@ -33,3 +33,8 @@ void Enemy::Render()
 	//mp_image->Draw();
 
 }
+
+void Enemy::EnemyCollision()
+{
+	
+}
