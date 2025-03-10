@@ -36,6 +36,6 @@ void Nomal::Update()
 
 void Nomal::Render()
 {
-	m_img.SetPos(CalcScreenPos());
+	m_img.SetPos(100,100);
 	m_img.Draw();
 }
