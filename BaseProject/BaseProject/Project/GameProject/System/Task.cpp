@@ -10,6 +10,10 @@ Task::Task(int prio,int sortOrder,int type)
 	,m_sortOrder(sortOrder)
 	,m_type(type)
 	, m_pos(0, 0,0)
+	,m_max(0,0,0)
+	,m_min(0,0,0)
+	,m_cube(0,0,0)
+	
 {
 	//TaskManagerのリストに自身を追加
 	TaskManager::Instance()->Add(this);
@@ -36,9 +40,7 @@ void Task::Collision(Task*b)
 {
 }
 
-void Task::CollisionCube(Task* b1, Task* b2)
-{
-}
+
 
 //有効フラグを設定
 void Task::SetEnable(bool enable)

@@ -32,7 +32,7 @@ public:
 	virtual void Render();
 
 	virtual void Collision(Task*b);
-	static void CollisionCube(Task*b1,Task*b2);
+	
 
 	
 	//—LŒøƒtƒ‰ƒO‚ğİ’è
@@ -69,4 +69,7 @@ private:
 public:
 	int m_type;
 	CVector3D m_pos;
+	CVector3D m_max;
+	CVector3D m_min;
+	CVector3D m_cube;
 };

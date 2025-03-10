@@ -199,6 +199,12 @@ void TaskManager::DeleteAll()
 	 return false;
  }*/
 
+ void TaskManager::AaBb(CVector3D max, CVector3D min, CVector3D pos, Task* b1,Task*b2)
+ {
+	
+	 
+ }
+
  void TaskManager::Collision()
  {
 	 auto it1 = m_objectList.begin();
