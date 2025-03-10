@@ -39,7 +39,7 @@
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="System\Nomal.h">
-      <Filter>System</Filter>
+      <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -81,7 +81,7 @@
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="System\Nomal.cpp">
-      <Filter>System</Filter>
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
