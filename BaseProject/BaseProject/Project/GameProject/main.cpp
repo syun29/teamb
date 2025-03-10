@@ -163,8 +163,8 @@ void Init(void)
 	new Nomal(
 		CVector3D(100.0f, 100.0f, 0.0f));
 
-	new Field(
-		CVector3D(100.0f, 100.0f, 0.0f));
+	//new Field(
+	//	CVector3D(100.0f, 100.0f, 0.0f));
 
 
 

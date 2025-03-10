@@ -71,6 +71,7 @@ void Player::ChangeState(EState state)
 
 	m_state = state;
 	m_stateStep = 0;
+
 }
 
 //ˆÚ“®ˆ—‚ÌXV

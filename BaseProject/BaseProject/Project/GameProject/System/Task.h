@@ -6,6 +6,7 @@ class TaskManager;
 enum class ETaskPrio
 {
 	Field, //フィールド
+	Nomal,
 	Shadow, //影
 	Object, //オブジェクト（プレイヤーとか敵とか）
 	UI,
