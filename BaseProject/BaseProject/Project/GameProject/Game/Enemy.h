@@ -5,7 +5,7 @@ class Enemy :public ObjectBase
 {
 public:
 	//コンストラクタ
-	Enemy(const CVector3D& pos);
+	Enemy(const CVector3D& pos, CVector3D& cube);
 	//デストラクタ
 	~Enemy();
 

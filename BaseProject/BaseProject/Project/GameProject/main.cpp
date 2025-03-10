@@ -133,8 +133,9 @@ void Init(void)
 
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/UFO.25.png"));
 	
-	
-	new EnemyManager;
+	new Enemy(
+		CVector3D(2500.0f, 100.0f, 0.0f), CVector3D(20.0f, 20.0f, 20.0f));
+	//new EnemyManager;
 
 	new SterManager;
 
@@ -159,7 +160,7 @@ void Init(void)
 
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨
 	new Player(
-	CVector3D(1500.0f, 100.0f, 0.0f));
+	CVector3D(1500.0f, 100.0f, 0.0f),CVector3D(20.0f,20.0f,20.0f));
 
 	new Nomal(
 		CVector3D(100.0f, 100.0f, 0.0f));

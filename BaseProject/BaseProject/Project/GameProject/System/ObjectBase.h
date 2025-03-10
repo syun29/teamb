@@ -28,9 +28,12 @@ public:
 
 	static CVector3D GetScreenPos(const CVector3D& pos);
 
-	static bool CollisionCube(Task* b1, Task* b2);
+	static bool CollisionCube(ObjectBase* b1, ObjectBase* b2);
 protected:
-	CVector3D m_pos;		// オブジェクトの座標
+	CVector3D m_pos;// オブジェクトの座標
+	CVector3D m_max;
+	CVector3D m_min;
+	CVector3D m_cube;	
 	bool m_isGrounded;		// 地面に接地してあるかどうか
 	CImage* mp_shadowImg;	// 影の画像
 };

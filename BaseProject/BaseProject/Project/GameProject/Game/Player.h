@@ -5,7 +5,7 @@ class Player:public ObjectBase
 {
 public:
 	//コンストラクタ
-	Player(const CVector3D& pos);
+	Player(const CVector3D& pos, CVector3D& cube);
 	//デストラクタ
 	~Player();
 
@@ -39,7 +39,6 @@ private:
 
 	EState m_state;
 	int m_stateStep;
-	int m_rad;
 	//アニメーションの種類
 	enum class EAnimType
 	{

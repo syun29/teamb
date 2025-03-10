@@ -80,7 +80,7 @@ CVector3D ObjectBase::GetScreenPos(const CVector3D& pos)
 	return pos - m_scroll;
 }
 
-bool ObjectBase::CollisionCube(Task* b1, Task* b2)
+bool ObjectBase::CollisionCube(ObjectBase* b1, ObjectBase* b2)
 {
 	b1->m_max = b1->m_pos + b1->m_cube;
 	b1->m_min = b1->m_pos - b1->m_cube;
@@ -91,8 +91,8 @@ bool ObjectBase::CollisionCube(Task* b1, Task* b2)
 		b1->m_min.y > b2->m_max.y || b1->m_max.y < b2->m_min.y &&
 		b1->m_min.z > b2->m_max.z || b1->m_max.z < b2->m_min.z) 
 	{
-		return true;
+		return false;
 	}
 		
-	return false;
+	return true;
 }

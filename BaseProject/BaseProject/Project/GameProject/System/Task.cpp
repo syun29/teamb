@@ -9,10 +9,7 @@ Task::Task(int prio,int sortOrder,int type)
 	,m_prio(prio)
 	,m_sortOrder(sortOrder)
 	,m_type(type)
-	, m_pos(0, 0,0)
-	,m_max(0,0,0)
-	,m_min(0,0,0)
-	,m_cube(0,0,0)
+	
 	
 {
 	//TaskManager‚ÌƒŠƒXƒg‚É©g‚ğ’Ç‰Á
