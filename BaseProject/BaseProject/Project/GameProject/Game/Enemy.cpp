@@ -12,6 +12,7 @@ Enemy::Enemy(const CVector3D& pos)
 	m_img = COPY_RESOURCE("Enemy", CImage);
 	m_img.ChangeAnimation(0);
 	m_img.SetSize(64*2, 64*2);
+	m_rad = 50;
 
 	
 }
@@ -39,6 +40,16 @@ void Enemy::Render()
 
 void Enemy::Collision(Task*b)
 {
-	printf("“–‚½‚Á‚½");
+	switch (b->m_type) {
+	case eType_Player: {
+		CVector3D v = b->m_pos - m_pos;
+		if (abs(v.x) < 32) {
+
+		printf("“–‚½‚Á‚½");
+		}
+	}
+
+
+	}
 }
 
