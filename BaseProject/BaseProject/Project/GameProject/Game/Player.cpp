@@ -5,7 +5,7 @@
 #define MOVE_SPEED_X 3.0f //横方向の移動速度
 #define MOVE_SPEED_Z 3.0f //奥方向の移動速度
 #define JUMP_SPEED 15.0f	// ジャンプ速度
-#define GRAVITY	-1.0F	//重力
+#define GRAVITY	-0.50f	//重力
 
 //プレイヤーのアニメーションデータの前宣言
 TexAnimData Player::ANIM_DATA[4] =

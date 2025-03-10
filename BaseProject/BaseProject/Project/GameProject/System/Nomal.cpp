@@ -31,11 +31,11 @@ Nomal::~Nomal()
 
 void Nomal::Update()
 {
-	m_img.UpdateAnimation();
 }
 
 void Nomal::Render()
 {
 	m_img.SetPos(100,100);
+	//m_img.SetPos(CalcScreenPos());
 	m_img.Draw();
 }
