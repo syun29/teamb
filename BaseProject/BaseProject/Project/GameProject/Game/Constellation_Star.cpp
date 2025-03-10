@@ -25,7 +25,10 @@ Constellation_Star::Constellation_Star(const CVector3D& pos,int kinds)
 	m_penta.ChangeAnimation(0);
 	m_penta.SetSize(64 * 2, 64 * 2);*/
 
-	
+	if (PUSH(CInput::eButton10))
+	{
+		m_pos.x += 100;
+	}
 }
 
 Constellation_Star::~Constellation_Star()
@@ -34,10 +37,7 @@ Constellation_Star::~Constellation_Star()
 
 void Constellation_Star::Update()
 {
-	if (PUSH(CInput::eButton2))
-	{
-		score += 100;
-	}
+	
 }
 
 void Constellation_Star::Render()
