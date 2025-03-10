@@ -17,7 +17,7 @@ TexAnimData Nomal::ANIM_DATA[1] =
 
 //コンストラクタ
 Nomal::Nomal(const CVector3D& pos)
-	:ObjectBase(pos)
+	:ObjectBase(pos,eType_Star)
 {
 	//画像読み込み
 	m_img = COPY_RESOURCE("Nomal", CImage);
