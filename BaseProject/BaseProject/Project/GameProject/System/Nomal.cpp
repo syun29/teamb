@@ -1,7 +1,6 @@
 #include "Nomal.h"
 
 #define CHIP_SIZE 137
-#define CENTER_POS CVector3D(68.0f,68.0f)
 
 //星のアニメーションデータ
 TexAnimData Nomal::ANIM_DATA[1] =
@@ -44,7 +43,7 @@ void Nomal::Update()
 
 void Nomal::Render()
 {
-	//m_img.SetPos(CalcScreenPos());
-	m_img.SetPos(100,100);
+	m_img.SetPos(CalcScreenPos());
+	//m_img.SetPos(100,100);
 	m_img.Draw();
 }

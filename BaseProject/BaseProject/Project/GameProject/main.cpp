@@ -161,14 +161,11 @@ void Init(void)
 	new Player(
 	CVector3D(1500.0f, 100.0f, 0.0f));
 
-	/*new Nomal(
-		CVector3D(100.0f, 100.0f, 0.0f));*/
+	new Nomal(
+		CVector3D(100.0f, 100.0f, 0.0f));
 
 	new Field(
 		CVector3D(100.0f, 100.0f, 0.0f));
-
-
-
 
 
 
