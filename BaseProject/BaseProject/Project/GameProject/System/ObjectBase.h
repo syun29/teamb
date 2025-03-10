@@ -6,8 +6,8 @@ class ObjectBase:public Task
 {
 public:
 	// コンストラクタ
-	ObjectBase();
-	ObjectBase(const CVector3D& pos);
+	ObjectBase(int type);
+	ObjectBase(const CVector3D& pos,int type);
 	// デストラクタ
 	virtual ~ObjectBase();
 

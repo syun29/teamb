@@ -3,13 +3,13 @@
 
 CVector3D ObjectBase::m_scroll(0, 0, 0);
 // コンストラクタ
-ObjectBase::ObjectBase()
-	: ObjectBase(CVector3D::zero)
+ObjectBase::ObjectBase( int type)
+	: ObjectBase(CVector3D::zero,type)
 {
 }
 
-ObjectBase::ObjectBase(const CVector3D& pos)
-	: Task((int)ETaskPrio::Object,0)
+ObjectBase::ObjectBase(const CVector3D& pos,int type)
+	: Task((int)ETaskPrio::Object,0,type)
 	, m_pos(pos)
 	, m_isGrounded(true)
 	, mp_shadowImg(nullptr)

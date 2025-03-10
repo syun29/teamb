@@ -1,7 +1,12 @@
 #pragma once
 
 class TaskManager;
-
+enum {
+	eType_Enemy,
+	eType_Player,
+	eType_Star,
+	eType_Field,
+};
 //タスクの優先度の種類
 enum class ETaskPrio
 {
@@ -16,7 +21,7 @@ class Task
 
 public:
 	//コンストラクタ
-	Task(int prio,int sortOrder);
+	Task(int prio,int sortOrder,int type);
 	//デストラクタ
 	virtual ~Task();
 
@@ -25,6 +30,10 @@ public:
 	//描画
 	virtual void Render();
 
+	virtual void Collision(Task*b);
+	static void CollisionCube(Task*b1,Task*b2);
+
+	
 	//有効フラグを設定
 	void SetEnable(bool enable);
 	//有効フラグを取得
@@ -56,4 +65,5 @@ private:
 	bool m_isKill; //削除フラグ
 	int m_prio; //優先度
 	int m_sortOrder; //同じ優先度内での順番
+	int m_type;
 };

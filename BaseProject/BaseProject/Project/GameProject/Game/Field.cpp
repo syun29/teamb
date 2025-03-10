@@ -1,7 +1,7 @@
 #include "Field.h"
 #include "../System/ObjectBase.h"
 Field::Field(const CVector3D& pos)
-	:Task((int)ETaskPrio::Field,0)
+	:Task((int)ETaskPrio::Field,0,eType_Field)
 {
 	m_backGround = COPY_RESOURCE("BackGround", CImage);
 	m_ground = COPY_RESOURCE("Ground", CImage);

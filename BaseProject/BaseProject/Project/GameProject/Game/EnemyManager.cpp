@@ -3,6 +3,8 @@
 EnemyManager::EnemyManager()
 	:time(60*100)
 	,enemyTimer(60*3)
+	,ObjectBase(eType_Enemy)
+
 {
 
 	

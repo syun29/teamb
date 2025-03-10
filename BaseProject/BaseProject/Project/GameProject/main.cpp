@@ -35,7 +35,7 @@ void MainLoop(void) {
 	//全てのタスクを描画
 	TaskManager::Instance()->Render();
 
-
+	TaskManager::Instance()->Collision();
 
 
 
@@ -124,9 +124,9 @@ void Init(void)
 	//----矢代----
 	
 	 
-	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri.png"));
-	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad.png"));
-	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta.png"));
+	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri02.png"));
+	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad02.png"));
+	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta02.png"));
 
 	ADD_RESOURCE("Score", CImage::CreateImage("Image/Score01.png"));
 	new Score(CVector2D(1700,300));

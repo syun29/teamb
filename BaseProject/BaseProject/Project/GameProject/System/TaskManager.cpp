@@ -183,3 +183,34 @@ void TaskManager::DeleteAll()
 		 }
 	 }
  }
+
+ /*void TaskManager::Collision()
+ {
+	 
+ }*/
+
+ /*void TaskManager::CollisionCube(Task*b1,Task*b2)
+ {
+	 CVector2D v = b1->m_pos - b2->m_pos;
+	 float l = v.Length();
+	 if (l < b1->m_rad + b2->m_rad) {
+		 return true;
+	 }
+	 return false;
+ }*/
+
+ void TaskManager::Collision()
+ {
+	 auto it1 = m_objectList.begin();
+	 auto last = m_objectList.end();
+	 while (it1 != last) {
+		 auto it2 = it1;
+		 it2++;
+		 while (it2 != last) {
+			 (*it1)->Collision(*it2);
+			 (*it2)->Collision(*it1);
+			 it2++;
+		 }
+		 it1++;
+	 }
+ }

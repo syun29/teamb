@@ -27,6 +27,9 @@ public:
 	//リストに登録されているタスクを描画
 	void Render();
 
+	//void Collision();
+	//void CollisionCircle();
+	void Collision();
 private:
 
 	//コンストラクタ

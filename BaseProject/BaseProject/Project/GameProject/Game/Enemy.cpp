@@ -6,7 +6,7 @@
 #define MOVE_SPEED_Y 3.0f 
 
 Enemy::Enemy(const CVector3D& pos)
-	:ObjectBase(pos)
+	:ObjectBase(pos,eType_Enemy)
 {
 	m_pos = pos;
 	m_img = COPY_RESOURCE("Enemy", CImage);
@@ -23,7 +23,7 @@ Enemy::~Enemy()
 void Enemy::Update()
 {
 	m_pos.x -= 5;
-
+	
 
 }
 
@@ -37,7 +37,8 @@ void Enemy::Render()
 
 }
 
-void Enemy::EnemyCollision()
+void Enemy::Collision(Task*b)
 {
-	
+	printf("“–‚½‚Á‚½");
 }
+

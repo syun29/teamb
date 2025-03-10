@@ -2,6 +2,8 @@
 #include "Constellation_Star.h"
 SterManager::SterManager()
 	:sterCnt(4)
+	, ObjectBase(eType_Player)
+
 {
 }
 

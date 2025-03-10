@@ -47,7 +47,7 @@ TexAnimData Player::ANIM_DATA[4] =
 
 //コンストラクタ
 Player::Player(const CVector3D& pos)
-	:ObjectBase(pos)
+	:ObjectBase(pos,eType_Player)
 {
 	m_pos = pos;
 
