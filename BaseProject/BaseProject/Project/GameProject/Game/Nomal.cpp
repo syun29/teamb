@@ -16,7 +16,7 @@ TexAnimData Nomal::ANIM_DATA[1] =
 
 //コンストラクタ
 Nomal::Nomal(const CVector3D& pos)
-	:ObjectBase(pos,eType_Star)
+	:ObjectBase(pos, eType_Star)
 {
 	//画像読み込み
 	m_img = COPY_RESOURCE("Nomal", CImage);
@@ -31,12 +31,12 @@ Nomal::~Nomal()
 
 void Nomal::Update()
 {
-/*	m_cnt--;
-	if (m_cnt <= 0) {
-		m_cnt = 300;
-		new Nomal(
-			CVector3D(100.0f, 100.0f, 0.0f));
-	}*/
+	/*	m_cnt--;
+		if (m_cnt <= 0) {
+			m_cnt = 300;
+			new Nomal(
+				CVector3D(100.0f, 100.0f, 0.0f));
+		}*/
 
 	m_img.UpdateAnimation();
 }
@@ -44,5 +44,6 @@ void Nomal::Update()
 void Nomal::Render()
 {
 	m_img.SetPos(CalcScreenPos());
+	m_img.SetSize(137 * 2, 137 * 2);
 	m_img.Draw();
 }

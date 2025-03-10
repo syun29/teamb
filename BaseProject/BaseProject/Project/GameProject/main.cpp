@@ -4,7 +4,7 @@
 #include "Game/EnemyManager.h"
 #include"Game/Field.h"
 #include"UI/Score.h"
-#include"System/Nomal.h"
+#include"Game/Nomal.h"
 #include "Game/SterManager.h"
 Enemy* g_enemy = nullptr;
 
