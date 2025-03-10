@@ -16,7 +16,6 @@ public:
 	// 座標を設定
 	void SetPos(const CVector3D& pos);
 	static CVector3D m_scroll;
-
 	/// <summary>
 	/// 3次元座標からスクリーン座標（2D）に変換
 	/// </summary>
@@ -29,6 +28,7 @@ public:
 
 	static CVector3D GetScreenPos(const CVector3D& pos);
 
+	static bool CollisionCube(Task* b1, Task* b2);
 protected:
 	CVector3D m_pos;		// オブジェクトの座標
 	bool m_isGrounded;		// 地面に接地してあるかどうか

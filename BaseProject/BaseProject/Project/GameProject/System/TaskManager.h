@@ -26,10 +26,18 @@ public:
 	void Update();
 	//リストに登録されているタスクを描画
 	void Render();
+	
+	CVector3D m_max;
+	CVector3D m_min;
+	CVector3D m_pos;
 
+	void AaBb(CVector3D max,CVector3D min,CVector3D pos,Task*b1,Task*b2);
+	
 	//void Collision();
 	//void CollisionCircle();
 	void Collision();
+	/*CAABB m_max;
+	CAABB m_min;*/
 private:
 
 	//コンストラクタ
