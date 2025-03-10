@@ -15,6 +15,7 @@ public:
 	void Render();
 
 	CImage m_img;
+	int m_cnt;
 	static TexAnimData ANIM_DATA[];
 
 private:
