@@ -68,8 +68,5 @@ private:
 	int m_sortOrder; //“¯‚¶—Dæ“x“à‚Å‚Ì‡”Ô
 public:
 	int m_type;
-	CVector3D m_pos;
-	CVector3D m_max;
-	CVector3D m_min;
-	CVector3D m_cube;
+	
 };

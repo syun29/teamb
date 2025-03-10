@@ -5,7 +5,7 @@
 #define MOVE_SPEED_X 3.0f 
 #define MOVE_SPEED_Y 3.0f 
 
-Enemy::Enemy(const CVector3D& pos)
+Enemy::Enemy(const CVector3D& pos, CVector3D& cube)
 	:ObjectBase(pos,eType_Enemy)
 {
 	m_pos = pos;
@@ -13,7 +13,7 @@ Enemy::Enemy(const CVector3D& pos)
 	m_img.ChangeAnimation(0);
 	m_img.SetSize(64*2, 64*2);
 	m_rad = 50;
-
+	m_cube = cube;
 	
 }
 
@@ -42,11 +42,11 @@ void Enemy::Collision(Task*b)
 {
 	switch (b->m_type) {
 	case eType_Player: {
-		CVector3D v = b->m_pos - m_pos;
-		if (abs(v.x) < 32) {
-
-		printf("“–‚½‚Á‚½");
+		if (ObjectBase::CollisionCube(this, dynamic_cast<ObjectBase*>(b))) 
+		{
+			printf("‚ ‚½‚Á‚½");
 		}
+		
 	}
 
 
