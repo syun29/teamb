@@ -5,6 +5,7 @@
 #include"Game/Field.h"
 #include"UI/Score.h"
 #include"System/Nomal.h"
+#include "Game/SterManager.h"
 Enemy* g_enemy = nullptr;
 
 void MainLoop(void) {
@@ -123,9 +124,9 @@ void Init(void)
 	//----–î‘ã----
 	
 	 
-
-
-
+	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri.png"));
+	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad.png"));
+	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta.png"));
 
 	ADD_RESOURCE("Score", CImage::CreateImage("Image/Score01.png"));
 	new Score(CVector2D(1700,300));
@@ -135,7 +136,7 @@ void Init(void)
 	
 	new EnemyManager;
 
-
+	new SterManager;
 
 
 

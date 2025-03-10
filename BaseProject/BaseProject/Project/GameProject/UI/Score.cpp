@@ -18,9 +18,10 @@ void Score::Render()
 	scoreCnt = score;
 	for (int i = 0; i < 6; i++,scoreCnt/10)
 	{
-		scoreGet = scoreCnt % 10;
+		scoreGet = scoreCnt;
 		m_img.SetRect(scoreGet*102, 0, scoreGet * 102 + 102, 169);
-		m_img.SetPos(1800 - 102*i, 100);
-		m_img.Draw();
+		m_img.SetPos(1900 - 102*i, 100);
+		
 	}
+	m_img.Draw();
 }

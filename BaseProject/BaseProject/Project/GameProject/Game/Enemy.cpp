@@ -24,6 +24,7 @@ void Enemy::Update()
 {
 	m_pos.x -= 5;
 
+
 }
 
 void Enemy::Render()
