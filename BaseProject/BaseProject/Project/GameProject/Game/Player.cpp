@@ -55,6 +55,7 @@ Player::Player(const CVector3D& pos)
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_img.ChangeAnimation(0);
 	m_img.SetCenter(CENTER_POS);
+	m_rad = 50;
 }
 
 //デストラクタ

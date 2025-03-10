@@ -66,5 +66,7 @@ private:
 	bool m_isKill; //削除フラグ
 	int m_prio; //優先度
 	int m_sortOrder; //同じ優先度内での順番
+public:
 	int m_type;
+	CVector3D m_pos;
 };

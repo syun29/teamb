@@ -14,6 +14,7 @@ public:
 	//•`‰æˆ—
 	void Render();
 	CImage m_img;
+	int m_rad;
 private:
 	//static TexAnimData ANIM_DATA[];
 	void Collision(Task*b);

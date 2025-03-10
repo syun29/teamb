@@ -9,6 +9,7 @@ Task::Task(int prio,int sortOrder,int type)
 	,m_prio(prio)
 	,m_sortOrder(sortOrder)
 	,m_type(type)
+	, m_pos(0, 0,0)
 {
 	//TaskManager‚ÌƒŠƒXƒg‚ÉŽ©g‚ð’Ç‰Á
 	TaskManager::Instance()->Add(this);

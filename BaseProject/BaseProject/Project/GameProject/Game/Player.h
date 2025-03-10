@@ -39,7 +39,7 @@ private:
 
 	EState m_state;
 	int m_stateStep;
-
+	int m_rad;
 	//アニメーションの種類
 	enum class EAnimType
 	{
