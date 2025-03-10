@@ -25,7 +25,6 @@
     <ClInclude Include="Game\EnemyManager.h" />
     <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Game\Nomal.h" />
-    <ClInclude Include="Game\NomalManager.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Game\SterManager.h" />
     <ClInclude Include="Global.h" />
@@ -42,7 +41,6 @@
     <ClCompile Include="Game\EnemyManager.cpp" />
     <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="Game\Nomal.cpp" />
-    <ClCompile Include="Game\NomalManager.cpp" />
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Game\SterManager.cpp" />
     <ClCompile Include="main.cpp" />

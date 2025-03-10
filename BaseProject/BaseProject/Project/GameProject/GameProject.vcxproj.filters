@@ -38,9 +38,6 @@
     <ClInclude Include="Game\SterManager.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Game\NomalManager.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="Game\Nomal.h">
       <Filter>Game</Filter>
     </ClInclude>
@@ -81,9 +78,6 @@
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Game\SterManager.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\NomalManager.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Game\Nomal.cpp">
