@@ -7,8 +7,12 @@ struct StarData {
 	int id;
 };
 std::vector<StarData>star_data = {
-	{CVector3D(200,100,0),0,0},
-	{CVector3D(300,100,100),0,0},
+	{CVector3D(1000,500,200),0,0},
+	{CVector3D(2000,200,100),0,0},
+	{CVector3D(3000,100,300),0,0},	
+	{CVector3D(3500,100,400),0,0},
+	{CVector3D(4000,0,0),0,0},
+	{CVector3D(5500,100,100),0,0},
 };
 
 SterManager::SterManager()

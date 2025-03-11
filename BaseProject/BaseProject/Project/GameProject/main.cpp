@@ -29,6 +29,8 @@ void MainLoop(void) {
 
 	//ーーーー大勝ーーーー
 
+	TaskManager::Instance()->DeleteKilledTasks();
+
 	//全タスクを更新
 	TaskManager::Instance()->Update();
 
@@ -134,7 +136,7 @@ void Init(void)
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/UFO.25.png"));
 	
 	new Enemy(
-		CVector3D(2500.0f, 100.0f, 0.0f), CVector3D(20.0f, 20.0f, 20.0f));
+		CVector3D(2500.0f, 0.0f, 0.0f), CVector3D(20.0f, 20.0f, 20.0f));
 	//new EnemyManager;
 
 	//new SterManager;

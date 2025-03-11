@@ -37,6 +37,8 @@ private:
 	//ダメージ時の更新処理
 	void StateDamage();
 
+	void Collision(Task* b);
+
 	EState m_state;
 	int m_stateStep;
 	//アニメーションの種類

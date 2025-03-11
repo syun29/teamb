@@ -1,7 +1,7 @@
 #include"Player.h"
 
 #define CHIP_SIZE 260 //1コマのサイズ
-#define CENTER_POS CVector2D(128.0f,256.0f) //中心座標
+#define CENTER_POS CVector2D(128.0f,280.0f) //中心座標
 #define MOVE_SPEED_X 3.0f //横方向の移動速度
 #define MOVE_SPEED_Z 3.0f //奥方向の移動速度
 #define JUMP_SPEED 15.0f	// ジャンプ速度
@@ -129,10 +129,10 @@ void Player::StateIdle()
 		ChangeState(EState::Jump);
 	}
 
-	else if (PUSH(CInput::eButton1))
+	/*else if (PUSH(CInput::eButton1))
 	{
 		ChangeState(EState::Damage);
-	}
+	}*/
 }
 
 //ジャンプ中の更新処理
@@ -164,7 +164,7 @@ void Player::StateJump()
 	m_img.ChangeAnimation((int)EAnimType::Jump);
 }
 
-//死亡時の更新処理
+//ダメージ時の更新処理
 void Player::StateDamage()
 {
 	//ステップごとに処理を切り替え
@@ -177,7 +177,7 @@ void Player::StateDamage()
 		break;
 		//ステップ1:アニメーション終了待ち
 	case 1:
-		//攻撃アニメーションが終了したら、待機状態へ移行
+		//アニメーションが終了したら、待機状態へ移行
 		if (m_img.CheckAnimationEnd())
 		{
 			ChangeState(EState::Idle);
@@ -186,6 +186,20 @@ void Player::StateDamage()
 	}
 	
 }
+
+void Player::Collision(Task* b)
+{
+	switch (b->m_type) {
+	case eType_Enemy: {
+		if (ObjectBase::CollisionCube(this, dynamic_cast<ObjectBase*>(b)))
+		{
+			ChangeState(EState::Damage);
+		}
+	}
+	}
+}
+
+
 
 //更新処理
 void Player::Update()
