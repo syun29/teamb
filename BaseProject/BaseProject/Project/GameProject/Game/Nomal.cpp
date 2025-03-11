@@ -1,6 +1,7 @@
 #include "Nomal.h"
 
 #define CHIP_SIZE 137
+#define CENTER_POS CVector3D(68.0f,135.0f)
 
 //星のアニメーションデータ
 TexAnimData Nomal::ANIM_DATA[1] =
@@ -23,6 +24,7 @@ Nomal::Nomal(const CVector3D& pos)
 	m_pos = pos;
 	m_img.ChangeAnimation(0);
 	m_cnt = 0;
+	m_cube = CVector3D(30, 30, 30);
 
 }
 Nomal::~Nomal()
@@ -31,19 +33,26 @@ Nomal::~Nomal()
 
 void Nomal::Update()
 {
-	/*	m_cnt--;
-		if (m_cnt <= 0) {
-			m_cnt = 300;
-			new Nomal(
-				CVector3D(100.0f, 100.0f, 0.0f));
-		}*/
-
 	m_img.UpdateAnimation();
 }
 
 void Nomal::Render()
 {
+	RenderShadow();
 	m_img.SetPos(CalcScreenPos());
 	m_img.SetSize(137 * 2, 137 * 2);
+	m_img.SetCenter(137.0, 135.0*2);
 	m_img.Draw();
+}
+
+void Nomal::Collision(Task* b)
+{
+	switch (b->m_type) {
+	case eType_Player: {
+		if (ObjectBase::CollisionCube(this, dynamic_cast<ObjectBase*>(b))) 
+		{
+			Kill();
+		}
+	}
+	}
 }

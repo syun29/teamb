@@ -19,5 +19,5 @@ public:
 	static TexAnimData ANIM_DATA[];
 
 private:
-
+	void Collision(Task* b);
 };

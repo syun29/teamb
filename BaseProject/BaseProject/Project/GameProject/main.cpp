@@ -137,7 +137,7 @@ void Init(void)
 		CVector3D(2500.0f, 100.0f, 0.0f), CVector3D(20.0f, 20.0f, 20.0f));
 	//new EnemyManager;
 
-	new SterManager;
+	//new SterManager;
 
 
 
@@ -162,8 +162,10 @@ void Init(void)
 	new Player(
 	CVector3D(150.0f, 100.0f, 0.0f),CVector3D(20.0f,20.0f,20.0f));
 
-	new Nomal(
-		CVector3D(160.0f, 100.0f, 0.0f));
+	//new Nomal(
+	//	CVector3D(160.0f, 100.0f, 0.0f));
+
+	new SterManager;
 
 	new Field(
 		CVector3D(100.0f, 100.0f, 0.0f));
