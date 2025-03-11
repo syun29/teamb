@@ -98,16 +98,23 @@ bool Player::UpdateMove()
 	//上キーを押している間
 	if (HOLD(CInput::eUp))
 	{
-		//奥方向へ移動
-		m_pos.z -= MOVE_SPEED_Z;
-		isMove = true;
+		if (m_pos.z >= 0)
+		{
+
+			//奥方向へ移動
+			m_pos.z -= MOVE_SPEED_Z;
+			isMove = true;
+		}
 	}
 	//下キーを押している間
 	else if (HOLD(CInput::eDown))
 	{
-		//手前方向へ移動
-		m_pos.z += MOVE_SPEED_Z;
-		isMove = true;
+		if (m_pos.z <= 200)
+		{
+			//手前方向へ移動
+			m_pos.z += MOVE_SPEED_Z;
+			isMove = true;
+		}
 	}
 
 	return isMove;
@@ -229,6 +236,7 @@ void Player::Update()
 	m_img.UpdateAnimation();
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280/2;
+
 }
 
 //描画処理
