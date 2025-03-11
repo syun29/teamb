@@ -98,7 +98,7 @@ bool Player::UpdateMove()
 	//ãƒL[‚ð‰Ÿ‚µ‚Ä‚¢‚éŠÔ
 	if (HOLD(CInput::eUp))
 	{
-		if (m_pos.z >= 0)
+		if (m_pos.z >= -50)
 		{
 
 			//‰œ•ûŒü‚ÖˆÚ“®
