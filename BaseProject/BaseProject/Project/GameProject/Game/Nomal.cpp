@@ -1,4 +1,5 @@
 #include "Nomal.h"
+#include"UI/Score.h"
 
 #define CHIP_SIZE 137
 #define CENTER_POS CVector3D(68.0f,135.0f)
@@ -52,6 +53,7 @@ void Nomal::Collision(Task* b)
 		if (ObjectBase::CollisionCube(this, dynamic_cast<ObjectBase*>(b))) 
 		{
 			Kill();
+			Score::AddScore(100);
 		}
 	}
 	}
