@@ -10,9 +10,9 @@ enum {
 class SterManager :public ObjectBase
 {
 public:
+//	int starRand;
 	SterManager();
 	~SterManager();
-
 	void Update();
 	int sterCnt;
 };
