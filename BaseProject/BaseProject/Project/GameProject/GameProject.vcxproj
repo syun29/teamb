@@ -33,6 +33,7 @@
     <ClInclude Include="System\Task.h" />
     <ClInclude Include="System\TaskManager.h" />
     <ClInclude Include="UI\Score.h" />
+    <ClInclude Include="UI\Timer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Constellation.cpp" />
@@ -49,6 +50,7 @@
     <ClCompile Include="System\Task.cpp" />
     <ClCompile Include="System\TaskManager.cpp" />
     <ClCompile Include="UI\Score.cpp" />
+    <ClCompile Include="UI\Timer.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>

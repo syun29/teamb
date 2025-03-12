@@ -5,6 +5,7 @@ enum {
 	eType_Enemy,
 	eType_Player,
 	eType_Star,
+	eType_Timer,
 	eType_Field,
 	eType_Score,
 	eType_Constellation
