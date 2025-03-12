@@ -27,5 +27,14 @@ void Score::Render()
 
 void Score::AddScore(int ad)
 {
-	s_score += 100;
+	s_score += ad;
+}
+
+void Score::DownScore(int down)
+{
+	s_score -= down;
+	if (s_score <= 0)
+	{
+		s_score = 0;
+	}
 }

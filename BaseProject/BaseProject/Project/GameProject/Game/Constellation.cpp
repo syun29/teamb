@@ -17,14 +17,19 @@ void Constellation::Update()
 	if (starCnt[0] == 3)
 	{
 		Score::AddScore(3000);
+		starCnt[0] = 0;
 	}
 	if (starCnt[1] == 4)
 	{
 		Score::AddScore(3000);
+		starCnt[1] = 0;
+
 	}
 	if (starCnt[2] == 5)
 	{
 		Score::AddScore(3000);
+		starCnt[2] = 0;
+
 	}
 
 }

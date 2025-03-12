@@ -1,5 +1,5 @@
 #include "Enemy.h"
-
+#include "UI/Score.h"
 #define CHIP_SIZE 24 
 #define CENTER_POS CVector3D(12.0f,12.0f) 
 #define MOVE_SPEED_X 3.0f 
@@ -45,7 +45,9 @@ void Enemy::Collision(Task*b)
 	case eType_Player: {
 		if (ObjectBase::CollisionCube(this, dynamic_cast<ObjectBase*>(b))) 
 		{
-			printf("‚ ‚½‚Á‚½");
+			Kill();
+			Score::DownScore(500);
+			
 		}
 		
 	}

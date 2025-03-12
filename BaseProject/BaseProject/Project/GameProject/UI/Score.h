@@ -10,4 +10,5 @@ public:
 	void Update();
 	void Render();
 	static void AddScore(int ad);
+	static void DownScore(int down);
 };
