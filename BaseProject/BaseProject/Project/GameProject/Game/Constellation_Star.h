@@ -5,7 +5,7 @@ class Constellation_Star :public StarBase
 {
 public:
 	//コンストラクタ
-	Constellation_Star(const CVector3D& pos,int kinds);
+	Constellation_Star(const CVector3D& pos,CVector3D& cube,int kinds);
 	//デストラクタ
 	~Constellation_Star();
 
@@ -19,5 +19,6 @@ public:
 	CImage m_quad;//四角形
 	CImage m_penta;//五角形
 private:
-	
+	void Collision(Task* b);
+
 };
