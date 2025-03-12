@@ -31,14 +31,12 @@ std::vector<StarData>star_data = {
 SterManager::SterManager()
 	:sterCnt(4)
 	, ObjectBase(eType_Player)
-	//,starRand(0)
 {
-	//starRand = rand() % 6;
 	for (auto& v : star_data) {
 		if (v.type == eType_Nomal)
 			new Nomal(v.pos);
 		else
-			new Constellation_Star(v.pos , CVector3D(20, 20, 20), v.type);
+			new Constellation_Star(v.pos , CVector3D(50, 50, 50), v.type);
 	}
 }
 

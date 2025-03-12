@@ -6,8 +6,8 @@
 #include"UI/Score.h"
 #include"Game/Nomal.h"
 #include "Game/SterManager.h"
-
-#include"UI/Timer.h"#include "Game/Constellation_Star.h"
+#include "Game/Constellation_Star.h"
+#include"UI/Timer.h"
 
 #include"Game/Constellation.h"
 Enemy* g_enemy = nullptr;
@@ -144,12 +144,12 @@ void Init(void)
 	new EnemyManager;
 
 	//new SterManager;
+	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/tri.png"));
+	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/quad.png"));
+	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/penta.png"));
 
-	new Constellation();
-
-
-
-
+	new Constellation(CVector2D(150,150));
+	
 
 
 
