@@ -87,8 +87,8 @@ bool ObjectBase::CollisionCube(ObjectBase* b1, ObjectBase* b2)
 	b2->m_max = b2->m_pos + b2->m_cube;
 	b2->m_min = b2->m_pos - b2->m_cube;
 
-	if (b1->m_min.x > b2->m_max.x || b1->m_max.x < b2->m_min.x &&
-		b1->m_min.y > b2->m_max.y || b1->m_max.y < b2->m_min.y &&
+	if (b1->m_min.x > b2->m_max.x || b1->m_max.x < b2->m_min.x ||
+		b1->m_min.y > b2->m_max.y || b1->m_max.y < b2->m_min.y ||
 		b1->m_min.z > b2->m_max.z || b1->m_max.z < b2->m_min.z) 
 	{
 		return false;
