@@ -7,12 +7,18 @@ struct StarData {
 	int id;
 };
 std::vector<StarData>star_data = {
-	{CVector3D(1000,100,0),0,0},
-	{CVector3D(1500,0,100),0,0},
-	{CVector3D(3000,0,0),0,0},	
-	{CVector3D(3500,0,200),0,0},
-	{CVector3D(4000,100,0),0,0},
-	{CVector3D(5500,200,0),0,0},
+	{CVector3D(1000,100,0),eType_Nomal,0},
+	{CVector3D(1500,0,100),eType_Nomal,0},
+	{CVector3D(3000,0,0),eType_Nomal,0},
+	{CVector3D(3500,0,200),eType_Nomal,0},
+	{CVector3D(4000,100,0),eType_Nomal,0},
+	{CVector3D(5500,200,0),eType_Nomal,0},
+	{CVector3D(4500,200,0),eType_Tri,0},
+	{CVector3D(500,200,0),eType_Tri,0},
+	{CVector3D(3500,200,0),eType_Tri,0},
+
+
+
 };
 
 SterManager::SterManager()
@@ -20,8 +26,12 @@ SterManager::SterManager()
 	, ObjectBase(eType_Player)
 
 {
+
 	for (auto& v : star_data) {
-		new Nomal(v.pos);
+		if (v.type == eType_Nomal)
+			new Nomal(v.pos);
+		else
+			new Constellation_Star(v.pos, CVector3D(20, 20, 20), v.type);
 	}
 }
 

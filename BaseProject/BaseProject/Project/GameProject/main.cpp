@@ -6,6 +6,7 @@
 #include"UI/Score.h"
 #include"Game/Nomal.h"
 #include "Game/SterManager.h"
+#include "Game/Constellation_Star.h"
 Enemy* g_enemy = nullptr;
 
 void MainLoop(void) {

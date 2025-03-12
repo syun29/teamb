@@ -1,6 +1,7 @@
 #include "Constellation_Star.h"
-
-Constellation_Star::Constellation_Star(const CVector3D& pos,int kinds)
+#include "UI/Score.h"
+#include "Constellation.h"
+Constellation_Star::Constellation_Star(const CVector3D& pos,CVector3D& cube, int kinds)
 	:kind(kinds)
 {
 	char constellaion_ster[3] [6] = {
@@ -39,12 +40,32 @@ void Constellation_Star::Update()
 
 void Constellation_Star::Render()
 {
+	RenderShadow();
 	m_img.SetPos(CalcScreenPos());
+	m_img.SetSize(137, 137);
+	m_img.SetCenter(110.0, 135.0 * 2);
 	m_img.Draw();
+
 	/*m_tri.SetPos(CalcScreenPos());
 	m_tri.Draw();
 	m_quad.SetPos(CalcScreenPos());
 	m_quad.Draw();
 	m_penta.SetPos(CalcScreenPos());
 	m_penta.Draw();*/
+}
+
+void Constellation_Star::Collision(Task* b)
+{
+	switch (b->m_type) 
+	{
+	case eType_Player: {
+		if (ObjectBase::CollisionCube(this, dynamic_cast<ObjectBase*>(b)))
+		{
+			
+			Kill();
+			Constellation::starCnt[kind]++;
+			Score::AddScore(100);
+		}
+	}
+	}
 }

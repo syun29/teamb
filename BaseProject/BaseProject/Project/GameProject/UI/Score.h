@@ -1,13 +1,13 @@
 #pragma once
-#include"../System/StarBase.h"
-class Score :public StarBase 
+#include"../System/Task.h"
+class Score :public Task
 {
 public:
 	CImage m_img;
 	
-	int scoreCnt;
-	int scoreGet;
+	static int s_score;
 	Score(const CVector2D& p);
 	void Update();
 	void Render();
+	static void AddScore(int ad);
 };

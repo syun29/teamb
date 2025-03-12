@@ -6,6 +6,8 @@ enum {
 	eType_Player,
 	eType_Star,
 	eType_Field,
+	eType_Score,
+	eType_Constellation
 };
 //タスクの優先度の種類
 enum class ETaskPrio
