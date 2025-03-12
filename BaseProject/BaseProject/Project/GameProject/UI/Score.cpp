@@ -19,7 +19,7 @@ void Score::Render()
 		int s =score % 10;
 		m_img.SetRect(102*s, 0,  102*s + 102, 169);
 		m_img.SetSize(150, 110);
-		m_img.SetPos(1900 - 102 * i, 100);
+		m_img.SetPos(1700 - 102 * i, 100);
 		m_img.Draw();
 
 	}

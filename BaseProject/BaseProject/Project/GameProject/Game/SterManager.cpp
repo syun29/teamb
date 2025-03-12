@@ -7,37 +7,38 @@ struct StarData {
 	int id;
 };
 std::vector<StarData>star_data = {
-	{CVector3D(1000,100,0),eType_Nomal,0},
-	{CVector3D(1500,0,100),eType_Nomal,0},
-	{CVector3D(3000,0,0),eType_Nomal,0},
-	{CVector3D(3500,0,200),eType_Nomal,0},
-	{CVector3D(4000,100,0),eType_Nomal,0},
-	{CVector3D(5500,200,0),eType_Nomal,0},
-	{CVector3D(4500,200,-50),eType_Tri,0},
-	{CVector3D(2030,200,60),eType_Tri,0},
-	{CVector3D(3500,200,0),eType_Tri,0},
-	{CVector3D(400,0,0),eType_Quad,0},
+	{CVector3D(100,20,0),eType_Nomal,0},
+	{CVector3D(1500,20,100),eType_Nomal,0},
+	{CVector3D(3000,20,0),eType_Nomal,0},
+	{CVector3D(3500,20,200),eType_Nomal,0},
+	{CVector3D(4000,20,0),eType_Nomal,0},
+	{CVector3D(5500,20,0),eType_Nomal,0},
+	{CVector3D(4500,20,-50),eType_Tri,0},
+	{CVector3D(2030,20,60),eType_Tri,0},
+	{CVector3D(3500,20,0),eType_Tri,0},
+	{CVector3D(400,20,0),eType_Quad,0},
 	{CVector3D(1580,20,0),eType_Quad,0},
-	{CVector3D(100,0,-50),eType_Quad,0},
-	{CVector3D(1450,200,0),eType_Quad,0},
-	{CVector3D(7000,200,0),eType_Penta,0},
-	{CVector3D(6350,100,0),eType_Penta,0},
-	{CVector3D(1250,150,0),eType_Penta,0},
-	{CVector3D(400,0,0),eType_Penta,0},
-	{CVector3D(300,10,0),eType_Penta,0},
+	{CVector3D(100,20,-50),eType_Quad,0},
+	{CVector3D(1450,20,0),eType_Quad,0},
+	{CVector3D(7000,20,0),eType_Penta,0},
+	{CVector3D(6350,20,0),eType_Penta,0},
+	{CVector3D(1250,20,0),eType_Penta,0},
+	{CVector3D(400,20,0),eType_Penta,0},
+	{CVector3D(300,0,0),eType_Penta,0},
 };
+
 
 SterManager::SterManager()
 	:sterCnt(4)
 	, ObjectBase(eType_Player)
-
+	//,starRand(0)
 {
-
+	//starRand = rand() % 6;
 	for (auto& v : star_data) {
 		if (v.type == eType_Nomal)
 			new Nomal(v.pos);
 		else
-			new Constellation_Star(v.pos, CVector3D(20, 20, 20), v.type);
+			new Constellation_Star(v.pos , CVector3D(20, 20, 20), v.type);
 	}
 }
 
@@ -48,22 +49,6 @@ SterManager::~SterManager()
 void SterManager::Update()
 {
 	
-		/*int sterRand = rand() % 3;
-		switch (sterRand)
-		{
-		case 0:
-			new Constellation_Star(
-				CVector3D(1920.0f, 100.0f, 0.0f), 0);
-			break;
-		case 1:
-			new Constellation_Star(
-				CVector3D(1920.0f, 100.0f, 0.0f), 0);
-			break;
-		case 2:
-			new Constellation_Star(
-				CVector3D(1920.0f, 100.0f, 0.0f), 0);
-			break;
-		}*/
 		
 	
 	 
