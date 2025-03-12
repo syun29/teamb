@@ -1,10 +1,28 @@
 #include "SterManager.h"
 #include "Constellation_Star.h"
+#include"Nomal.h"
+struct StarData {
+	CVector3D pos;
+	int type;
+	int id;
+};
+std::vector<StarData>star_data = {
+	{CVector3D(1000,100,0),0,0},
+	{CVector3D(1500,0,100),0,0},
+	{CVector3D(3000,0,0),0,0},	
+	{CVector3D(3500,0,200),0,0},
+	{CVector3D(4000,100,0),0,0},
+	{CVector3D(5500,200,0),0,0},
+};
+
 SterManager::SterManager()
 	:sterCnt(4)
 	, ObjectBase(eType_Player)
 
 {
+	for (auto& v : star_data) {
+		new Nomal(v.pos);
+	}
 }
 
 SterManager::~SterManager()

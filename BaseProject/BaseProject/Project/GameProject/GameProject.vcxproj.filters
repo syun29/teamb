@@ -38,7 +38,7 @@
     <ClInclude Include="Game\SterManager.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="System\Nomal.h">
+    <ClInclude Include="Game\Nomal.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
@@ -80,7 +80,7 @@
     <ClCompile Include="Game\SterManager.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="System\Nomal.cpp">
+    <ClCompile Include="Game\Nomal.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>

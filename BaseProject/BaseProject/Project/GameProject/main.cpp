@@ -4,7 +4,7 @@
 #include "Game/EnemyManager.h"
 #include"Game/Field.h"
 #include"UI/Score.h"
-#include"System/Nomal.h"
+#include"Game/Nomal.h"
 #include "Game/SterManager.h"
 Enemy* g_enemy = nullptr;
 
@@ -28,6 +28,8 @@ void MainLoop(void) {
 
 
 	//ーーーー大勝ーーーー
+
+	TaskManager::Instance()->DeleteKilledTasks();
 
 	//全タスクを更新
 	TaskManager::Instance()->Update();
@@ -137,7 +139,7 @@ void Init(void)
 		CVector3D(2500.0f, 0.0f, 0.0f), CVector3D(20.0f, 20.0f, 20.0f));
 	//new EnemyManager;
 
-	new SterManager;
+	//new SterManager;
 
 
 
@@ -160,16 +162,15 @@ void Init(void)
 
 	//プレイヤーを生成
 	new Player(
-	CVector3D(1500.0f, 100.0f, 0.0f),CVector3D(20.0f,20.0f,20.0f));
+	CVector3D(150.0f, 100.0f, 0.0f),CVector3D(20.0f,20.0f,20.0f));
 
-	/*new Nomal(
-		CVector3D(100.0f, 100.0f, 0.0f));*/
+	//new Nomal(
+	//	CVector3D(160.0f, 100.0f, 0.0f));
+
+	new SterManager;
 
 	new Field(
 		CVector3D(100.0f, 100.0f, 0.0f));
-
-
-
 
 
 

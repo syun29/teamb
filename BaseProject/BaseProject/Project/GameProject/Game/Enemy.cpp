@@ -34,6 +34,7 @@ void Enemy::Render()
 
 	m_img.SetPos(CalcScreenPos());
 	m_img.Draw();
+	RenderShadow();
 	//mp_image->Draw();
 
 }
