@@ -9,6 +9,9 @@
 #include "Game/Constellation_Star.h"
 #include"UI/Timer.h"
 
+#include"UI/Timer.h"
+#include "Game/Constellation_Star.h"
+
 #include"Game/Constellation.h"
 Enemy* g_enemy = nullptr;
 
@@ -161,6 +164,8 @@ void Init(void)
 
 	ADD_RESOURCE("Nomal", CImage::CreateImage("Image/nomal.png",Nomal::ANIM_DATA,137,137));
 
+	ADD_RESOURCE("Timer", CImage::CreateImage("Image/gauge.png"));
+
 	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/background.png"));
 	ADD_RESOURCE("Ground", CImage::CreateImage("Image/ground.png"));
 
@@ -171,6 +176,7 @@ void Init(void)
 	//new Nomal(
 	//	CVector3D(160.0f, 100.0f, 0.0f));
 
+	new Timer;
 	new SterManager;
 
 	new Field(
