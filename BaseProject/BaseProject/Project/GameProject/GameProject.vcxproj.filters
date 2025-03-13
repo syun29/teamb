@@ -44,6 +44,9 @@
     <ClInclude Include="UI\Timer.h">
       <Filter>UI</Filter>
     </ClInclude>
+    <ClInclude Include="Title\Title.h">
+      <Filter>Title</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -89,6 +92,9 @@
     <ClCompile Include="UI\Timer.cpp">
       <Filter>UI</Filter>
     </ClCompile>
+    <ClCompile Include="Title\Title.cpp">
+      <Filter>Title</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -102,6 +108,9 @@
     </Filter>
     <Filter Include="UI">
       <UniqueIdentifier>{7693cdd7-d93a-4197-a02b-26a45db512c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Title">
+      <UniqueIdentifier>{03552239-d2d5-42fe-a0e6-55bf7e604f45}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #include "Timer.h"
-int Timer::timeCnt = 60 * 150;
-int Timer::time_Max = 60 * 150;
+int Timer::timeCnt = 60 * 120;
+int Timer::time_Max = 60 * 120;
 
 int Timer::getTime()
 {
@@ -9,7 +9,7 @@ int Timer::getTime()
 
 void Timer::resetTime()
 {
-	timeCnt = time_Max = 60 * 150;
+	timeCnt = time_Max = 60 * 120;
 }
 
 Timer::Timer()

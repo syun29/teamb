@@ -9,7 +9,7 @@
 #include "Game/Constellation_Star.h"
 #include"UI/Timer.h"
 
-#include"UI/Timer.h"
+#include"Title/Title.h"
 #include "Game/Constellation_Star.h"
 
 #include"Game/Constellation.h"
@@ -169,6 +169,8 @@ void Init(void)
 	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/background.png"));
 	ADD_RESOURCE("Ground", CImage::CreateImage("Image/ground.png"));
 
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/titlek.png"));
+
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨
 	new Player(
 	CVector3D(150.0f, 100.0f, 0.0f),CVector3D(20.0f,20.0f,20.0f));
@@ -181,6 +183,7 @@ void Init(void)
 
 	new Field(
 		CVector3D(100.0f, 100.0f, 0.0f));
+	//new Title;
 
 
 
