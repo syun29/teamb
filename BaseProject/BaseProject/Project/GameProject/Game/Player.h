@@ -10,9 +10,9 @@ public:
 	~Player();
 
 	//XVˆ—
-	void Update();
+	void Update()override;
 	//•`‰æˆ—
-	void Render();
+	void Render()override;
 
 	CImage m_img;
 	static TexAnimData ANIM_DATA[];

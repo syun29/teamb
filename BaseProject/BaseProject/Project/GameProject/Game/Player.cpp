@@ -246,4 +246,5 @@ void Player::Render()
 	RenderShadow();
 	m_img.SetPos(CalcScreenPos());
 	m_img.Draw();
+	RenderCubu();
 }

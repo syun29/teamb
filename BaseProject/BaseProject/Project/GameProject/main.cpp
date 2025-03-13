@@ -142,9 +142,9 @@ void Init(void)
 
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/UFO.25.png"));
 	
-	new Enemy(
-		CVector3D(2500.0f, 0.0f, 100.0f), CVector3D(20.0f, 20.0f, 20.0f), CVector3D(20.0f, 20.0f, 20.0f));
-	//new EnemyManager;
+	/*new Enemy(
+		CVector3D(2500.0f, 0.0f, 100.0f), CVector3D(20.0f, 20.0f, 20.0f), CVector3D(20.0f, 20.0f, 20.0f));*/
+	new EnemyManager;
 
 	//new SterManager;
 	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/tri0.png"));
@@ -171,7 +171,7 @@ void Init(void)
 
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨
 	new Player(
-	CVector3D(150.0f, 100.0f, 0.0f),CVector3D(20.0f,20.0f,20.0f), CVector3D(20.0f, 20.0f, 20.0f));
+	CVector3D(150.0f, 100.0f, 0.0f),CVector3D(128.0f,256.0f,128.0f), CVector3D(10.0f, 20.0f, 20.0f));
 
 	//new Nomal(
 	//	CVector3D(160.0f, 100.0f, 0.0f));

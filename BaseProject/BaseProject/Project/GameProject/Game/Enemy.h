@@ -10,11 +10,11 @@ public:
 	~Enemy();
 
 	//XVˆ—
-	void Update();
+	void Update() override;
 	//•`‰æˆ—
-	void Render();
+	void Render()override;
 	CImage m_img;
-	int test;
+
 private:
 	//static TexAnimData ANIM_DATA[];
 	void Collision(Task*b);

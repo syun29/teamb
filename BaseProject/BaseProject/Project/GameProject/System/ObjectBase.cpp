@@ -42,8 +42,13 @@ void ObjectBase::SetPos(const CVector3D& pos)
 	m_pos = pos;
 }
 
-// 3次元座標から2次元座標を計算
 CVector2D ObjectBase::CalcScreenPos(bool grounded) const
+{
+	return CalcScreenPos(m_pos,grounded);
+}
+
+// 3次元座標から2次元座標を計算
+CVector2D ObjectBase::CalcScreenPos(const CVector3D& pos,bool grounded) const
 {
 	CVector2D ret;
 
@@ -65,6 +70,14 @@ CVector2D ObjectBase::CalcScreenPos(bool grounded) const
 	}
 
 	return ret;
+}
+
+void ObjectBase::Update()
+{
+}
+
+void ObjectBase::Render()
+{
 }
 
 // 影描画
@@ -95,4 +108,17 @@ bool ObjectBase::CollisionCube(ObjectBase* b1, ObjectBase* b2)
 	}
 		
 	return true;
+}
+
+void ObjectBase::RenderCubu()
+{
+#ifdef _DEBUG
+	m_max = m_pos + m_cubeMax;
+	m_min = m_pos - m_cubeMin;
+	Utility::DrawQuad(CalcScreenPos(CVector3D(m_min.x, m_max.y, m_pos.z)),
+		CVector2D(m_cubeMax.x + m_cubeMin.x, m_cubeMax.y + m_cubeMin.y), CVector4D(1, 1, 0, 0.5f));
+#endif 
+
+	
+
 }

@@ -21,7 +21,11 @@ public:
 	/// </summary>
 	/// <param name="grounded">trueならば、高さは考慮せず地面の位置を返す</param>
 	/// <returns>スクリーン座標</returns>
-	CVector2D CalcScreenPos(bool grounded = false) const;
+ 	CVector2D CalcScreenPos(bool grounded = false) const;
+	CVector2D CalcScreenPos(const CVector3D& pos,bool grounded = false) const;
+
+	virtual void Update();
+	virtual void Render();
 
 	// 影描画
 	virtual void RenderShadow();
@@ -29,6 +33,7 @@ public:
 	static CVector3D GetScreenPos(const CVector3D& pos);
 
 	static bool CollisionCube(ObjectBase* b1, ObjectBase* b2);
+	void RenderCubu();
 protected:
 	CVector3D m_pos;// オブジェクトの座標
 	CVector3D m_max;
