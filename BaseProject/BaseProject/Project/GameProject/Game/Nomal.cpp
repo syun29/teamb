@@ -25,8 +25,8 @@ Nomal::Nomal(const CVector3D& pos)
 	m_pos = pos;
 	m_img.ChangeAnimation(0);
 	m_cnt = 0;
-	m_cube = CVector3D(30, 30, 30);
-
+	m_cubeMax = CVector3D(30, 30, 30);
+	m_cubeMin= CVector3D(30, 30, 30);
 }
 Nomal::~Nomal()
 {

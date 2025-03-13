@@ -46,7 +46,7 @@ TexAnimData Player::ANIM_DATA[4] =
 };
 
 //コンストラクタ
-Player::Player(const CVector3D& pos,CVector3D&cube)
+Player::Player(const CVector3D& pos, CVector3D& cubeMax, CVector3D& cubeMin)
 	:ObjectBase(pos,eType_Player)
 {
 	m_pos = pos;
@@ -55,7 +55,8 @@ Player::Player(const CVector3D& pos,CVector3D&cube)
 	m_img = COPY_RESOURCE("Player", CImage);
 	m_img.ChangeAnimation(0);
 	m_img.SetCenter(CENTER_POS);
-	m_cube = cube;
+	m_cubeMax = cubeMax;
+	m_cubeMin = cubeMin;
 }
 
 //デストラクタ

@@ -5,7 +5,7 @@ class Player:public ObjectBase
 {
 public:
 	//コンストラクタ
-	Player(const CVector3D& pos, CVector3D& cube);
+	Player(const CVector3D& pos, CVector3D& cubeMax, CVector3D& cubeMin);
 	//デストラクタ
 	~Player();
 

@@ -5,16 +5,18 @@
 #define MOVE_SPEED_X 5.0f 
 #define MOVE_SPEED_Y 3.0f 
 
-Enemy::Enemy(const CVector3D& pos, CVector3D& cube)
+Enemy::Enemy(const CVector3D& pos,CVector3D& cubeMax, CVector3D& cubeMin)
 	:ObjectBase(pos,eType_Enemy)
+	,test(0)
 {
 	m_pos = pos;
 	m_img = COPY_RESOURCE("Enemy", CImage);
 	m_img.ChangeAnimation(0);
-	m_img.SetSize(64*2, 64*2);
-	m_rad = 50;
-	m_cube = cube;
-	
+	m_img.SetSize(64*2-test, 64*2-test);
+	m_img.SetCenter(64, 64);
+	m_cubeMax = cubeMax;
+	m_cubeMax = cubeMin;
+
 }
 
 Enemy::~Enemy()
@@ -23,9 +25,16 @@ Enemy::~Enemy()
 
 void Enemy::Update()
 {
-	m_pos.x -= MOVE_SPEED_X;
-	
-
+	if (HOLD(CInput::eMouseL)) {
+		m_pos.x -= MOVE_SPEED_X;
+	}
+	if (HOLD(CInput::eMouseR)) {
+		m_pos.z -= MOVE_SPEED_X;
+	}
+	/*if (m_pos.z<) {
+		
+		test -= 10;
+	}*/
 }
 
 void Enemy::Render()
