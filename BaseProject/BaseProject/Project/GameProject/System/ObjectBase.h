@@ -33,7 +33,8 @@ protected:
 	CVector3D m_pos;// オブジェクトの座標
 	CVector3D m_max;
 	CVector3D m_min;
-	CVector3D m_cube;	
+	CVector3D m_cubeMax;	
+	CVector3D m_cubeMin;
 	bool m_isGrounded;		// 地面に接地してあるかどうか
 	CImage* mp_shadowImg;	// 影の画像
 };

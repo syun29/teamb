@@ -5,7 +5,7 @@ class Enemy :public ObjectBase
 {
 public:
 	//コンストラクタ
-	Enemy(const CVector3D& pos, CVector3D& cube);
+	Enemy(const CVector3D& pos, CVector3D& cubeMax,CVector3D& cubeMin);
 	//デストラクタ
 	~Enemy();
 
@@ -14,7 +14,7 @@ public:
 	//描画処理
 	void Render();
 	CImage m_img;
-	int m_rad;
+	int test;
 private:
 	//static TexAnimData ANIM_DATA[];
 	void Collision(Task*b);

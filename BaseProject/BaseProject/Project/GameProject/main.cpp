@@ -142,14 +142,14 @@ void Init(void)
 
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/UFO.25.png"));
 	
-	/*new Enemy(
-		CVector3D(2500.0f, 0.0f, 0.0f), CVector3D(20.0f, 20.0f, 20.0f));*/
-	new EnemyManager;
+	new Enemy(
+		CVector3D(2500.0f, 0.0f, 100.0f), CVector3D(20.0f, 20.0f, 20.0f), CVector3D(20.0f, 20.0f, 20.0f));
+	//new EnemyManager;
 
 	//new SterManager;
-	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/tri.png"));
-	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/quad.png"));
-	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/penta.png"));
+	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/tri0.png"));
+	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/quad0.png"));
+	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/penta0.png"));
 
 	new Constellation(CVector2D(150,150));
 	
@@ -173,7 +173,7 @@ void Init(void)
 
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨
 	new Player(
-	CVector3D(150.0f, 100.0f, 0.0f),CVector3D(20.0f,20.0f,20.0f));
+	CVector3D(150.0f, 100.0f, 0.0f),CVector3D(20.0f,20.0f,20.0f), CVector3D(20.0f, 20.0f, 20.0f));
 
 	//new Nomal(
 	//	CVector3D(160.0f, 100.0f, 0.0f));

@@ -18,7 +18,7 @@ EnemyManager::~EnemyManager()
 
 void EnemyManager::Update()
 {
-	time--;
+	/*time--;
 	enemyTimer--;
 	if (time >= 0) {
 		if (enemyTimer < 0) {
@@ -40,5 +40,5 @@ void EnemyManager::Update()
 			}
 			enemyTimer = 60 * 3;
 		}
-	}
+	}*/
 }
