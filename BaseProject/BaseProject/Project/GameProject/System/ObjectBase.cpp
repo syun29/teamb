@@ -67,6 +67,13 @@ CVector2D ObjectBase::CalcScreenPos(bool grounded) const
 	return ret;
 }
 
+CVector2D ObjectBase::CalcScreenSize(const CVector2D& base_Size) const
+{
+	CVector2D ret;
+	ret = base_Size * (400 -(- m_pos.z)) / 400;
+	return ret;
+}
+
 // ‰e•`‰æ
 void ObjectBase::RenderShadow()
 {

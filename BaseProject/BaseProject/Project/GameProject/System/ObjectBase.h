@@ -23,6 +23,7 @@ public:
 	/// <returns>スクリーン座標</returns>
 	CVector2D CalcScreenPos(bool grounded = false) const;
 
+	CVector2D CalcScreenSize(const CVector2D& base_Size)const;
 	// 影描画
 	virtual void RenderShadow();
 
