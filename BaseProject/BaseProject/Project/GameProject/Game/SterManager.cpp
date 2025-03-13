@@ -30,13 +30,21 @@ std::vector<StarData>star_data = {
 
 SterManager::SterManager()
 	:sterCnt(4)
-	, ObjectBase(eType_Player)
+	, ObjectBase(eType_Star)
 {
-	for (auto& v : star_data) {
-		if (v.type == eType_Nomal)
-			new Nomal(v.pos);
-		else
-			new Constellation_Star(v.pos , CVector3D(50, 50, 50), v.type);
+	for (int i = 0; i < 10; i++) {
+		CVector3D pos(Utility::Rand(0.0f, 9000.f),
+			Utility::Rand(0.0f, 50.0f),
+			Utility::Rand(0.0f, 100.0f));
+		new Nomal(pos, CVector3D(65, 270, 50), CVector3D(68, -130, 50));
+	}
+	for (int j = 0; j < 3; j++) {
+		for (int i = 0; i < j + 3; i++) {
+			CVector3D pos(Utility::Rand(0.0f, 9000.f),
+				Utility::Rand(0.0f, 50.0f),
+				Utility::Rand(0.0f, 100.0f));
+			new Constellation_Star(pos, CVector3D(68, 270, 50), CVector3D(68, -130, 50), j);
+		}
 	}
 }
 

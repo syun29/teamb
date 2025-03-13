@@ -17,7 +17,7 @@ TexAnimData Nomal::ANIM_DATA[1] =
 };
 
 //コンストラクタ
-Nomal::Nomal(const CVector3D& pos)
+Nomal::Nomal(const CVector3D& pos, CVector3D& cubeMax, CVector3D& cubeMin)
 	:ObjectBase(pos, eType_Star)
 {
 	//画像読み込み
@@ -27,6 +27,8 @@ Nomal::Nomal(const CVector3D& pos)
 	m_cnt = 0;
 	m_cubeMax = CVector3D(30, 30, 30);
 	m_cubeMin= CVector3D(30, 30, 30);
+	m_cubeMax = cubeMax;
+	m_cubeMin = cubeMin;
 }
 Nomal::~Nomal()
 {
@@ -44,6 +46,7 @@ void Nomal::Render()
 	m_img.SetSize(137 * 2, 137 * 2);
 	m_img.SetCenter(137.0, 135.0*2);
 	m_img.Draw();
+	RenderCubu();
 }
 
 void Nomal::Collision(Task* b)

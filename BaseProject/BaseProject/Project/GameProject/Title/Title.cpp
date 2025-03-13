@@ -1,5 +1,5 @@
 #include "Title.h"
-
+#include "Game/Game.h"
 Title::Title()
 	:ObjectBase(eType_Title)
 {
@@ -10,6 +10,7 @@ void Title::Update()
 {
 	if (m_cnt++ > 60 && PUSH(CInput::eButton10)) {
 		Kill();
+		new Game();
 	}
 }
 

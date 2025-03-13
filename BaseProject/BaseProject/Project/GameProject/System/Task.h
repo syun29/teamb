@@ -10,10 +10,12 @@ enum {
 	eType_Score,
 	eType_Constellation,
 	eType_Title,
+	eType_Game
 };
 //タスクの優先度の種類
 enum class ETaskPrio
 {
+	Game,
 	Field, //フィールド
 	Nomal,
 	Shadow, //影

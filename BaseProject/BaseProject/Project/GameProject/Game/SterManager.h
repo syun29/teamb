@@ -15,4 +15,5 @@ public:
 	~SterManager();
 	void Update();
 	int sterCnt;
+	int starRend;
 };

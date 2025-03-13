@@ -5,7 +5,7 @@ class Constellation_Star :public StarBase
 {
 public:
 	//コンストラクタ
-	Constellation_Star(const CVector3D& pos,CVector3D& cube,int kinds);
+	Constellation_Star(const CVector3D& pos, CVector3D& cubeMax, CVector3D& cubeMin,int kinds);
 	//デストラクタ
 	~Constellation_Star();
 

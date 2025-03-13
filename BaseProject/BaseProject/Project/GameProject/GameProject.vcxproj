@@ -24,8 +24,10 @@
     <ClInclude Include="Game\Enemy.h" />
     <ClInclude Include="Game\EnemyManager.h" />
     <ClInclude Include="Game\Field.h" />
+    <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Game\Nomal.h" />
     <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="Game\Result.h" />
     <ClInclude Include="Game\SterManager.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="System\ObjectBase.h" />
@@ -42,8 +44,10 @@
     <ClCompile Include="Game\Enemy.cpp" />
     <ClCompile Include="Game\EnemyManager.cpp" />
     <ClCompile Include="Game\Field.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Game\Nomal.cpp" />
     <ClCompile Include="Game\Player.cpp" />
+    <ClCompile Include="Game\Result.cpp" />
     <ClCompile Include="Game\SterManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="System\ObjectBase.cpp" />

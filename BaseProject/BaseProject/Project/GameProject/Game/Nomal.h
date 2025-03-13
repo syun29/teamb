@@ -5,7 +5,7 @@ class Nomal :public ObjectBase
 {
 public:
 	//コンストラクタ
-	Nomal(const CVector3D& pos);
+	Nomal(const CVector3D& pos, CVector3D& cubeMax, CVector3D& cubeMin);
 	//デストラクタ
 	~Nomal();
 
