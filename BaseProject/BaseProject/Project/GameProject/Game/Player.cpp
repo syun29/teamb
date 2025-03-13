@@ -243,7 +243,12 @@ void Player::Update()
 //•`‰æˆ—
 void Player::Render()
 {
+
 	RenderShadow();
+
+	CVector2D size = CalcScreenSize(CVector2D(260,260));
+	m_img.SetSize(size);
+	m_img.SetCenter(size.x / 2, size.y);
 	m_img.SetPos(CalcScreenPos());
 	m_img.Draw();
 	RenderCubu();

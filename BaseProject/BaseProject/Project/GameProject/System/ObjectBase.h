@@ -27,6 +27,7 @@ public:
 	virtual void Update();
 	virtual void Render();
 
+	CVector2D CalcScreenSize(const CVector2D& base_Size)const;
 	// ‰e•`‰æ
 	virtual void RenderShadow();
 

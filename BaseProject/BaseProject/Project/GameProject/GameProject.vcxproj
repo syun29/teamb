@@ -32,6 +32,7 @@
     <ClInclude Include="System\StarBase.h" />
     <ClInclude Include="System\Task.h" />
     <ClInclude Include="System\TaskManager.h" />
+    <ClInclude Include="Title\Title.h" />
     <ClInclude Include="UI\Score.h" />
     <ClInclude Include="UI\Timer.h" />
   </ItemGroup>
@@ -49,6 +50,7 @@
     <ClCompile Include="System\StarBase.cpp" />
     <ClCompile Include="System\Task.cpp" />
     <ClCompile Include="System\TaskManager.cpp" />
+    <ClCompile Include="Title\Title.cpp" />
     <ClCompile Include="UI\Score.cpp" />
     <ClCompile Include="UI\Timer.cpp" />
   </ItemGroup>

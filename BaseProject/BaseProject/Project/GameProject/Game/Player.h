@@ -17,6 +17,7 @@ public:
 	CImage m_img;
 	static TexAnimData ANIM_DATA[];
 
+
 private:
 	//状態
 	enum class EState
@@ -39,6 +40,7 @@ private:
 
 	void Collision(Task* b);
 
+
 	EState m_state;
 	int m_stateStep;
 	//アニメーションの種類
@@ -53,4 +55,5 @@ private:
 	};
 
 	float m_moveSpeedY;	//Y軸(高さ)の移動速度
+	
 };
