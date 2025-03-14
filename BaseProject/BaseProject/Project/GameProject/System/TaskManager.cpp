@@ -12,8 +12,21 @@ TaskManager::TaskManager()
 }
 
 //デストラクタ
+//デストラクタ
 TaskManager::~TaskManager()
 {
+	//オブジェクトのリストも空にする
+	m_objectList.clear();
+	auto itr = m_taskList.begin();
+	auto end = m_taskList.end();
+	while (itr != end)
+	{
+		//削除するタスクのアドレスをいったん記憶し、
+		//リストから取り除いた後に、タスクを削除する
+		Task* del = *itr;
+		itr = m_taskList.erase(itr);
+		delete del;
+	}
 }
 //TaskManagerのインスタンスを取得
 TaskManager* TaskManager::Instance()
@@ -96,24 +109,7 @@ void TaskManager::Remove(Task* task, bool sort)
 	m_taskList.remove(task);
 }
 
- //すべてのタスクを削除
-void TaskManager::DeleteAll()
- {
-	//オブジェクトのリストも空にする
-	m_objectList.clear();
 
-	 //タスクリストの先頭から順番に削除する
-	 auto itr = m_taskList.begin();
-	 auto end = m_taskList.end();
-	 while(itr != end)
-	 {
-		 //削除するタスクのアドレスを一旦記憶し、
-		 //リストから取り除いた後に、タスクを削除する
-		 Task* del = *itr;
-		 itr = m_taskList.erase(itr);
-		 delete del;
-	 }
- }
  //削除フラグが立っているタスクを削除
  void TaskManager::DeleteKilledTasks()
  {
@@ -181,6 +177,13 @@ void TaskManager::DeleteAll()
 		 { 
 		 task->Render();
 		 }
+	 }
+ }
+ void TaskManager::DeleteAll()
+ {
+	 for (Task* task : m_taskList)
+	 {
+		 task->Kill();
 	 }
  }
 

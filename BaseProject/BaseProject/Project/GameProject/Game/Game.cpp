@@ -18,7 +18,7 @@ Game::Game()
 	: Task((int)ETaskPrio::Game, 0,eType_Game)
 {
 	new Player(
-		CVector3D(150.0f, 100.0f, 0.0f), CVector3D(125.0f, 260.0f, 40.0f), CVector3D(125.0f, 0.0f, 40.0f));
+		CVector3D(150.0f, 100.0f, 0.0f), CVector3D(115.0f, 230.0f, 20.0f), CVector3D(115.0f, 0.0f, 20.0f));
 	new Timer;
 	new SterManager;
 	new Field(

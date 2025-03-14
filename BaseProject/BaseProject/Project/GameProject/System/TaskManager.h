@@ -17,10 +17,10 @@ public:
 	//タスクリストからタスクを取り除く
 	void Remove(Task* task, bool sort = false);
 
-	//全てのタスクを削除
-	void DeleteAll();
 	//削除フラグが立っているタスクを削除
 	void DeleteKilledTasks();
+
+	void DeleteAll();
 
 	//リストに登録されているタスクを更新
 	void Update();

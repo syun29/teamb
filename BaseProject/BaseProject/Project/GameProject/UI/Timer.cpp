@@ -1,4 +1,6 @@
 #include "Timer.h"
+#include "../System/TaskManager.h"
+#include "Game/Result.h"
 int Timer::timeCnt = 60 * 60;
 int Timer::time_Max = 60 * 60;
 
@@ -24,6 +26,8 @@ void Timer::Update()
 	if (timeCnt < 0)
 	{
 		timeCnt = 0;
+		TaskManager::Instance()->DeleteAll();
+		new Result();
 	}
 }
 

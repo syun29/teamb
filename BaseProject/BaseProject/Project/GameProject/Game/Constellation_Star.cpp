@@ -33,8 +33,10 @@ void Constellation_Star::Render()
 {
 	RenderShadow();
 	m_img.SetPos(CalcScreenPos());
-	m_img.SetSize(137, 137);
-	m_img.SetCenter(110.0, 135.0 * 2);
+	CVector2D size = CalcScreenSize(CVector2D(137, 137));
+	m_img.SetSize(size);
+	m_img.SetCenter(size.x / 2, size.y*1.6);
+
 	m_img.Draw();
 	RenderCubu();
 }

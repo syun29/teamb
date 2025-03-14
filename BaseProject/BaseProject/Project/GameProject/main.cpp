@@ -150,7 +150,7 @@ void Init(void)
 	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/tri0.png"));
 	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/quad0.png"));
 	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/penta0.png"));
-
+	ADD_RESOURCE("Result", CImage::CreateImage("Image/Result0.png"));
 	
 
 
@@ -174,9 +174,9 @@ void Init(void)
 	
 
 	
-	new Game();
+	
 
-	//new Title;
+	new Title;
 
 
 
@@ -291,8 +291,8 @@ int __main(int* argcp, char** argv) {
 	GL::hWnd = WindowFromDC(glDc);
 	
 	//前面ボーダー無し
-	//SetWindowLong(GL::hWnd, GWL_STYLE, WS_POPUP);
-	//SetWindowPos(GL::hWnd, HWND_TOP, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SWP_SHOWWINDOW);
+	SetWindowLong(GL::hWnd, GWL_STYLE, WS_POPUP);
+	SetWindowPos(GL::hWnd, HWND_TOP, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SWP_SHOWWINDOW);
 	Init();
 
 

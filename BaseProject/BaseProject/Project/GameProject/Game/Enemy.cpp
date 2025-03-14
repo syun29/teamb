@@ -30,8 +30,9 @@ void Enemy::Render()
 	//m_img.SetPos(GetScreenPos(m_pos));
 
 	m_img.SetPos(CalcScreenPos());
-	m_img.SetCenter(64, 128);
-	m_img.SetSize(128, 128);
+	CVector2D size = CalcScreenSize(CVector2D(120, 120));
+	m_img.SetSize(size);
+	m_img.SetCenter(size.x / 2, size.y);
 	m_img.Draw();
 	ObjectBase::RenderShadow();
 	RenderCubu();
