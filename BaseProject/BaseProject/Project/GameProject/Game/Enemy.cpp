@@ -4,16 +4,20 @@
 #define CENTER_POS CVector3D(12.0f,12.0f) 
 #define MOVE_SPEED_X 5.0f 
 #define MOVE_SPEED_Y 3.0f 
+#define MOVE_SPEED_Z 5.0f 
 
-Enemy::Enemy(const CVector3D& pos,CVector3D& cubeMax, CVector3D& cubeMin)
-	:ObjectBase(pos,eType_Enemy)
+
+Enemy::Enemy(const CVector3D& pos, CVector3D& cubeMax, CVector3D& cubeMin, int types)
+	:ObjectBase(pos, eType_Enemy)
+	,type(types)
+	,enemySwitch_y(true)
+	,enemySwitch_z(true)
 {
 	m_pos = pos;
 	m_img = COPY_RESOURCE("Enemy", CImage);
 	m_img.ChangeAnimation(0);
 	m_cubeMax = cubeMax;
 	m_cubeMin = cubeMin;
-
 }
 
 Enemy::~Enemy()
@@ -22,7 +26,44 @@ Enemy::~Enemy()
 
 void Enemy::Update()
 {	
-	m_pos.x -= MOVE_SPEED_X;	
+	if (type == 0) {
+		m_pos.x -= MOVE_SPEED_X;
+	}
+	if (type == 1) {
+		if (enemySwitch_y == true) {
+			m_pos.x -= MOVE_SPEED_X;
+			m_pos.y += MOVE_SPEED_Y;
+		}
+		if (m_pos.y >= 200) {
+			enemySwitch_y = false;
+		}
+		if(enemySwitch_y==false) {
+			m_pos.x -= MOVE_SPEED_X;
+			m_pos.y -= MOVE_SPEED_Y;
+		}
+		if (m_pos.y <= 0) {
+			enemySwitch_y = true;
+		}
+	}
+	if (type == 2) {
+		m_pos.x -= 10;
+	}
+	if (type == 3) {
+		if (enemySwitch_z == true) {
+			m_pos.x -= MOVE_SPEED_X;
+			m_pos.z += MOVE_SPEED_Z;
+		}
+		if (m_pos.z >= 200) {
+			enemySwitch_z = false;
+		}
+		if (enemySwitch_z == false) {
+			m_pos.x -= MOVE_SPEED_X;
+			m_pos.z -= MOVE_SPEED_Z;
+		}
+		if (m_pos.z <= -50) {
+			enemySwitch_z = true;
+		}
+	}
 }
 
 void Enemy::Render()

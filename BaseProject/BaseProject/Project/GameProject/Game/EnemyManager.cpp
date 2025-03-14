@@ -29,7 +29,8 @@ void EnemyManager::Update()
 					CVector3D pos(Utility::Rand(1920.0f+m_scroll.x, 1920.f + m_scroll.x),
 						Utility::Rand(0.0f, 350.0f),
 						Utility::Rand(-50.0f, 200.0f));
-					new Enemy(pos, CVector3D(64.0f, 128.0f, 20.0f), CVector3D(64.0f, 0.0f, 20.0f));
+					int enemyType = rand() % 4;
+					new Enemy(pos, CVector3D(64.0f, 128.0f, 20.0f), CVector3D(64.0f, 0.0f, 20.0f),enemyType);
 				}
 			/*case 0:
 				new Enemy(

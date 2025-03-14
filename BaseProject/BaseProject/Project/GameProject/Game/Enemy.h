@@ -5,7 +5,7 @@ class Enemy :public ObjectBase
 {
 public:
 	//コンストラクタ
-	Enemy(const CVector3D& pos, CVector3D& cubeMax,CVector3D& cubeMin);
+	Enemy(const CVector3D& pos, CVector3D& cubeMax,CVector3D& cubeMin,int types);
 	//デストラクタ
 	~Enemy();
 
@@ -14,6 +14,9 @@ public:
 	//描画処理
 	void Render()override;
 	CImage m_img;
+	int type;
+	bool enemySwitch_y;
+	bool enemySwitch_z;
 
 private:
 	//static TexAnimData ANIM_DATA[];
