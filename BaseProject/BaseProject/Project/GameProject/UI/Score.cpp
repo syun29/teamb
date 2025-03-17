@@ -32,8 +32,7 @@ void Score::AddScore(int ad)
 
 void Score::DownScore(int down)
 {
-	s_score = down;
-	s_score--;
+	s_score -= down;
 	if (s_score <= 0)
 	{
 		s_score = 0;

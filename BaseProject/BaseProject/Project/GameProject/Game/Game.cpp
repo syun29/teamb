@@ -17,6 +17,10 @@
 Game::Game()
 	: Task((int)ETaskPrio::Game, 0,eType_Game)
 {
+	SOUND("Title")->Load("Sound/Star04.wav", 1);
+	SOUND("Game")->Load("Sound/Star01.wav", 1);
+	SOUND("Result")->Load("Sound/Star02.wav", 1);
+
 	new Player(
 		CVector3D(150.0f, 100.0f, 0.0f), CVector3D(115.0f, 230.0f, 20.0f), CVector3D(115.0f, 0.0f, 20.0f));
 	new Timer;

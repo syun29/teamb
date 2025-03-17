@@ -145,7 +145,7 @@ void Init(void)
 	/*new Enemy(
 		CVector3D(2500.0f, 0.0f, 100.0f), CVector3D(20.0f, 20.0f, 20.0f), CVector3D(20.0f, 20.0f, 20.0f));*/
 	
-
+	ADD_RESOURCE("Effect_Get", CImage::CreateImage("Image/09.png"),Effect::ANIM_DATA, 64*2, 64*2);
 	//new SterManager;
 	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/tri0.png"));
 	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/quad0.png"));
@@ -177,7 +177,6 @@ void Init(void)
 	
 
 	new Title;
-
 
 
 

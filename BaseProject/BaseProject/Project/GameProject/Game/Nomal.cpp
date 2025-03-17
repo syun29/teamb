@@ -1,6 +1,6 @@
 #include "Nomal.h"
 #include"UI/Score.h"
-
+#include "UI/Effect.h"
 #define CHIP_SIZE 137
 #define CENTER_POS CVector3D(68.0f,135.0f)
 
@@ -59,6 +59,8 @@ void Nomal::Collision(Task* b)
 		{
 			Kill();
 			Score::AddScore(100);
+			new Effect("Effect_Get", CVector3D(m_pos));
+
 		}
 	}
 	}
