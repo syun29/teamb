@@ -150,7 +150,7 @@ void Init(void)
 	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/tri0.png"));
 	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/quad0.png"));
 	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/penta0.png"));
-	ADD_RESOURCE("Result", CImage::CreateImage("Image/Result0.png"));
+	ADD_RESOURCE("Result", CImage::CreateImage("Image/result.png"));
 	
 
 
