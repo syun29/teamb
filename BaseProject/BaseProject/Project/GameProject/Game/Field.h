@@ -6,6 +6,7 @@ class Field:public Task
 private:
 	float m_backgroundscroll;
 
+
 public:
 	 Field(const CVector3D& pos);
 
