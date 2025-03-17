@@ -83,7 +83,7 @@ void ObjectBase::Render()
 CVector2D ObjectBase::CalcScreenSize(const CVector2D& base_Size) const
 {
 	CVector2D ret;
-	ret = base_Size * (700 -(- m_pos.z)) /700;
+	ret = base_Size * (800 -(- m_pos.z)) /800;
 	return ret;
 }
 
