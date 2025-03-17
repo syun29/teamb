@@ -135,7 +135,7 @@ void Init(void)
 	 
 	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri02.png"));
 	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad02.png"));
-	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta02.png"));
+	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta00.png"),Constellation_Star::ANIM_DATA,128,128);
 
 	ADD_RESOURCE("Score", CImage::CreateImage("Image/Score01.png"));
 	

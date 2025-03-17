@@ -1,7 +1,7 @@
 #pragma once
-#include"../System/StarBase.h"
+#include"../System/ObjectBase.h"
 
-class Constellation_Star :public StarBase
+class Constellation_Star :public ObjectBase
 {
 public:
 	//コンストラクタ
@@ -18,6 +18,8 @@ public:
 	CImage m_tri;//三角形
 	CImage m_quad;//四角形
 	CImage m_penta;//五角形
+	static TexAnimData ANIM_DATA[];
+
 private:
 	void Collision(Task* b);
 

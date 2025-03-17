@@ -7,7 +7,6 @@ class EnemyManager:public ObjectBase
 public:
 	EnemyManager();
 	~EnemyManager();
-
 	int time;
 	int enemyTimer;
 	void Update();
