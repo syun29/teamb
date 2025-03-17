@@ -19,9 +19,14 @@ void Field::Render()
 	m_backGround.SetRect(sc, 0, sc + 1920, 1080);
 	m_backGround.Draw();
 	
-	sc = ObjectBase::m_scroll.x/3;
-	m_ground.SetRect(sc, 0, sc + 720, 203);
+	sc = ObjectBase::m_scroll.x;
+	//m_ground.SetRect(sc, 0, sc + 720, 203);
+	
+	float a = 0;
+	a = sc / (4096 / 2);
+	m_ground.SetAng(a);
+	m_ground.SetSize(4096, 4096);
+	m_ground.SetPos(1920/2, 4096/2+600);
+	m_ground.SetCenter(4096 / 2, 4096 / 2);
 	m_ground.Draw();
-	m_ground.SetSize(720 * 3, 203 * 3);
-	m_ground.SetPos(0, 450);
 }
