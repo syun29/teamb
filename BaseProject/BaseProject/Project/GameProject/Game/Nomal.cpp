@@ -43,7 +43,7 @@ void Nomal::Render()
 {
 	RenderShadow();
 	m_img.SetPos(CalcScreenPos());
-	CVector2D size = CalcScreenSize(CVector2D(137*2, 137*2));
+	CVector2D size = CalcScreenSize(CVector2D(200, 200));
 	m_img.SetSize(size);
 	m_img.SetCenter(size.x / 2, size.y);
 

@@ -2,6 +2,8 @@
 #include "../System/TaskManager.h"
 #include "Game.h"
 #include "UI/score.h"
+#include "UI/Timer.h"
+#include "Game/Constellation.h"
 
 Result::Result() : Task((int)ETaskPrio::Result, 0, eType_Result)
 {
@@ -18,6 +20,10 @@ void Result::Update()
         TaskManager::Instance()->DeleteAll();
         new Game();
         Score::s_score = 0;
+        Timer::resetTime();
+        Constellation::starCnt[0] = {0};
+        Constellation::starCnt[1] = { 0 };
+        Constellation::starCnt[2] = { 0 };
     }
 }
 

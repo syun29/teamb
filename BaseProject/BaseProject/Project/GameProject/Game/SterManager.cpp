@@ -34,16 +34,16 @@ SterManager::SterManager()
 {
 	for (int i = 0; i < 10; i++) {
 		CVector3D pos(Utility::Rand(0.0f, 9000.f),
-			Utility::Rand(0.0f, 200.0f),
+			Utility::Rand(0.0f, 150.0f),
 			Utility::Rand(0.0f, 100.0f));
-		new Nomal(pos, CVector3D(65, 270, 50), CVector3D(68, -130, 50));
+		new Nomal(pos, CVector3D(50, 200, 50), CVector3D(50, -100, 50));
 	}
 	for (int j = 0; j < 3; j++) {
 		for (int i = 0; i < j + 3; i++) {
 			CVector3D pos(Utility::Rand(0.0f, 9000.f),
 				Utility::Rand(0.0f, 200.0f),
 				Utility::Rand(0.0f, 100.0f));
-			new Constellation_Star(pos, CVector3D(68, 270, 50), CVector3D(68, -130, 50), j);
+				new Constellation_Star(pos, CVector3D(50, 100, 30), CVector3D(50, 0, 30), j);
 		}
 	}
 }
