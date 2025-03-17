@@ -165,8 +165,8 @@ void Init(void)
 
 	ADD_RESOURCE("Timer", CImage::CreateImage("Image/gauge2.png"));
 
-	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/background.png"));
-	ADD_RESOURCE("Ground", CImage::CreateImage("Image/kyu2.png"));
+	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/Field1.png"));
+	ADD_RESOURCE("Ground", CImage::CreateImage("Image/Field2.png"));
 
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/titlek.png"));
 
