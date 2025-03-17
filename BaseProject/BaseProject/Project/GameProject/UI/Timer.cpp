@@ -25,9 +25,11 @@ void Timer::Update()
 	timeCnt--;
 	if (timeCnt < 0)
 	{
+		SOUND("Game")->Stop();
 		timeCnt = 0;
 		TaskManager::Instance()->DeleteAll();
 		new Result();
+		SOUND("Result")->Play();
 	}
 }
 

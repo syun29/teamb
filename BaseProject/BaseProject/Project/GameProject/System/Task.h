@@ -11,7 +11,8 @@ enum {
 	eType_Constellation,
 	eType_Title,
 	eType_Game,
-	eType_Result
+	eType_Result,
+	eType_Effect
 };
 //タスクの優先度の種類
 enum class ETaskPrio
@@ -23,6 +24,7 @@ enum class ETaskPrio
 	Shadow, //影
 	Object, //オブジェクト（プレイヤーとか敵とか）
 	UI,
+
 	
 };
 class Task
