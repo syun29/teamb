@@ -88,7 +88,9 @@ void Enemy::Collision(Task*b)
 		if (ObjectBase::CollisionCube(this, dynamic_cast<ObjectBase*>(b))) 
 		{
 			Kill();
+			
 			Score::DownScore(500);
+			
 			
 		}
 		

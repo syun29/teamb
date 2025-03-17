@@ -19,7 +19,7 @@ void Score::Render()
 		int s =score % 10;
 		m_img.SetRect(102*s, 0,  102*s + 102, 169);
 		m_img.SetSize(150, 110);
-		m_img.SetPos(1700 - 102 * i, 100);
+		m_img.SetPos(1700 - 102 * i, 10);
 		m_img.Draw();
 
 	}
@@ -32,7 +32,8 @@ void Score::AddScore(int ad)
 
 void Score::DownScore(int down)
 {
-	s_score -= down;
+	s_score = down;
+	s_score--;
 	if (s_score <= 0)
 	{
 		s_score = 0;

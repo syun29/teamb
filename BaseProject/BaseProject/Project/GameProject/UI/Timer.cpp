@@ -36,14 +36,14 @@ void Timer::Render()
 
 
 	//ÉQÅ[ÉWîwåi(ê‘)
-	m_img.SetPos(100, 100);
+	m_img.SetPos(100, 10);
 	m_img.SetSize(width, 77);
 	m_img.SetRect(0, 0, width, 77);
 	m_img.Draw();
 
 	//ÉQÅ[ÉWÇÃïù(óŒ)
 	int w = width * timeCnt/time_Max;
-	m_img.SetPos(99, 96);
+	m_img.SetPos(99, 6);
 	m_img.SetSize(w, 77);
 	m_img.SetRect(0, 77, w, 155);
 	m_img.Draw();

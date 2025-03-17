@@ -24,6 +24,7 @@ Game::Game()
 	new Field(
 		CVector3D(100.0f, 100.0f, 0.0f));
 	new Score(CVector2D(1700, 300));
+
 	new EnemyManager;
 	new Constellation(CVector2D(150, 150));
 

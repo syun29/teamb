@@ -55,15 +55,15 @@ void Constellation::Render()
 	if (starCnt[2] == 6) {
 		sc2 = 5;
 	}
-	m_img[0].SetPos(50,150);
+	m_img[0].SetPos(50,50);
 	m_img[0].SetRect(256*sc0, 0, 256 + sc0*256, 256);
 	m_img[0].SetSize(256, 256);
 	m_img[0].Draw();
-	m_img[1].SetPos(300, 150);
+	m_img[1].SetPos(300,60);
 	m_img[1].SetRect(256 * sc1, 0, 256 +sc1*256, 256);
 	m_img[1].SetSize(256/1.3, 256/1.3);
 	m_img[1].Draw();
-	m_img[2].SetPos(530, 150);
+	m_img[2].SetPos(530, 60);
 	m_img[2].SetRect(256 * sc2, 0, 256 + sc2 * 256, 256);
 	m_img[2].SetSize(256/1.3, 256/1.3);
 	m_img[2].Draw();
