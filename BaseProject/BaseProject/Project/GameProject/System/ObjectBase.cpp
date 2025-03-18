@@ -55,7 +55,7 @@ CVector2D ObjectBase::CalcScreenPos(const CVector3D& pos,bool grounded) const
 	// Xç¿ïWÇÕÇªÇÃÇ‹Ç‹ê›íË
 	ret.x = pos.x-m_scroll.x;
 
-	float size = 4096;
+	float size = 5500;
 	float r = size / 2;
 	float x = ret.x - SCREEN_WIDTH / 2;
 	float a = x / r;

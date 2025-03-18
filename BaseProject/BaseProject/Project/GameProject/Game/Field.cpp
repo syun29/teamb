@@ -23,10 +23,10 @@ void Field::Render()
 	//m_ground.SetRect(sc, 0, sc + 720, 203);
 	
 	float a = 0;
-	a = sc / (4096 / 2);
+	a = sc / (5500 / 2);
 	m_ground.SetAng(a);
-	m_ground.SetSize(4096, 4096);
-	m_ground.SetPos(1920/2, 4096/2+600);
-	m_ground.SetCenter(4096 / 2, 4096 / 2);
+	m_ground.SetSize(5500, 5500);
+	m_ground.SetPos(1920/2, 5500 /2+600);
+	m_ground.SetCenter(5500 / 2, 5500 / 2);
 	m_ground.Draw();
 }
