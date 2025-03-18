@@ -2,9 +2,9 @@
 #include "UI/Score.h"
 #define CHIP_SIZE 24 
 #define CENTER_POS CVector3D(12.0f,12.0f) 
-#define MOVE_SPEED_X 5.0f 
-#define MOVE_SPEED_Y 3.0f 
-#define MOVE_SPEED_Z 5.0f 
+#define MOVE_SPEED_X 5.0f*2.0f 
+#define MOVE_SPEED_Y 3.0f*2.0f 
+#define MOVE_SPEED_Z 5.0f*2.0f 
 
 
 Enemy::Enemy(const CVector3D& pos, CVector3D& cubeMax, CVector3D& cubeMin, int types)
