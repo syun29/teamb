@@ -2,13 +2,27 @@
 #include "UI/Score.h"
 #include "Constellation.h"
 #include"UI/Effect.h"
-TexAnimData Constellation_Star::ANIM_DATA[4] =
+TexAnimData Constellation_Star::ANIM_DATA[3] =
 {
-	//待機アニメーション
+	
 	{
 		new TexAnim[3]
 	{
-		{0,12},{1,12},{3,12}
+		{0,12*2},{1,12*2},{2,12*2}
+		},
+		3
+		},
+	{
+		new TexAnim[3]
+	{
+		{0,12},{1,12},{2,12}
+		},
+		3
+		},
+	{
+		new TexAnim[3]
+	{
+		{0,12},{1,12},{2,12}
 		},
 		3
 		},
@@ -50,7 +64,8 @@ void Constellation_Star::Render()
 	CVector2D size = CalcScreenSize(CVector2D(100, 100));
 	m_img.SetSize(size);
 	m_img.SetCenter(size.x / 2, size.y);
-	m_img.SetRect(0, 128, 128, 128*2);
+	//m_img.SetRect(0, 128, 128, 128*2);
+	m_img.SetRect(128*2, 128, 128*3, 128 * 2);
 	m_img.Draw();
 	RenderCubu();
 }

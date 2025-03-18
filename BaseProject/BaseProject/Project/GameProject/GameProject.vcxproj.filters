@@ -52,6 +52,9 @@
     <ClInclude Include="UI\Effect.h">
       <Filter>UI</Filter>
     </ClInclude>
+    <ClInclude Include="Title\Load.h">
+      <Filter>Title</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -104,6 +107,9 @@
     <ClCompile Include="Game\Result.cpp" />
     <ClCompile Include="UI\Effect.cpp">
       <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Title\Load.cpp">
+      <Filter>Title</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

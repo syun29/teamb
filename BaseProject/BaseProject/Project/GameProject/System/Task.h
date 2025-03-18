@@ -12,7 +12,8 @@ enum {
 	eType_Title,
 	eType_Game,
 	eType_Result,
-	eType_Effect
+	eType_Effect,
+	eType_Load
 };
 //タスクの優先度の種類
 enum class ETaskPrio

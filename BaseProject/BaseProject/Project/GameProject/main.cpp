@@ -135,9 +135,9 @@ void Init(void)
 	SOUND("Game")->Load("Sound/Star01.wav", 1);
 	SOUND("Result")->Load("Sound/Star02.wav", 1);
 	 
-	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri02.png"));
-	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad02.png"));
-	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta00.png"),Constellation_Star::ANIM_DATA,128,128);
+	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri00.png"));
+	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad00.png"));
+	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta00.png",Constellation_Star::ANIM_DATA,128,128));
 
 	ADD_RESOURCE("Score", CImage::CreateImage("Image/Score01.png"));
 	
@@ -168,15 +168,15 @@ void Init(void)
 	ADD_RESOURCE("Ground", CImage::CreateImage("Image/Field2.png"));
 
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
+	ADD_RESOURCE("Load", CImage::CreateImage("Image/Road1.png"));
 
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨
 	
-
 	
 	
 
-	new Title;
-
+	new Title();
+	
 
 
 }

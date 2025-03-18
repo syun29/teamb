@@ -34,6 +34,7 @@
     <ClInclude Include="System\StarBase.h" />
     <ClInclude Include="System\Task.h" />
     <ClInclude Include="System\TaskManager.h" />
+    <ClInclude Include="Title\Load.h" />
     <ClInclude Include="Title\Title.h" />
     <ClInclude Include="UI\Effect.h" />
     <ClInclude Include="UI\Score.h" />
@@ -55,6 +56,7 @@
     <ClCompile Include="System\StarBase.cpp" />
     <ClCompile Include="System\Task.cpp" />
     <ClCompile Include="System\TaskManager.cpp" />
+    <ClCompile Include="Title\Load.cpp" />
     <ClCompile Include="Title\Title.cpp" />
     <ClCompile Include="UI\Effect.cpp" />
     <ClCompile Include="UI\Score.cpp" />
