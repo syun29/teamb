@@ -168,7 +168,7 @@ void Init(void)
 	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/Field1.png"));
 	ADD_RESOURCE("Ground", CImage::CreateImage("Image/Field2.png"));
 
-	ADD_RESOURCE("Title", CImage::CreateImage("Image/titlek.png"));
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨
 	

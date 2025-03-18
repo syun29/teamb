@@ -24,8 +24,7 @@ enum class ETaskPrio
 	Shadow, //影
 	Object, //オブジェクト（プレイヤーとか敵とか）
 	UI,
-
-	
+	Effect,
 };
 class Task
 {

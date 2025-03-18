@@ -12,7 +12,7 @@ TexAnimData Effect::ANIM_DATA[1] =
 	},
 };
 Effect::Effect(const char*name,const CVector3D& pos)
-	:Task((int)ETaskPrio::UI, 0, eType_Effect)
+	:Task((int)ETaskPrio::Effect, 0, eType_Effect)
 	,m_pos(pos)
 
 {
