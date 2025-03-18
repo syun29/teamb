@@ -16,8 +16,10 @@ Result::Result() : Task((int)ETaskPrio::Result, 0, eType_Result)
 void Result::Update()
 {
     if (PUSH(CInput::eButton10)) {
+        SOUND("Result")->Stop();
         TaskManager::Instance()->DeleteAll();
         new Game();
+        SOUND("Game")->Play();
         Score::s_score = 0;
         Timer::resetTime();
         Constellation::starCnt[0] = {0};

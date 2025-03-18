@@ -9,10 +9,10 @@ Title::Title()
 
 void Title::Update()
 {
-	
 	if (m_cnt++ > 60 && PUSH(CInput::eButton10)) {
 		Kill();
 		new Game();
+		SOUND("Title")->Stop();
 		SOUND("Game")->Play();
 	}
 }

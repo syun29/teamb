@@ -131,7 +131,9 @@ void Init(void)
 	//ÉQÅ[ÉÄãNìÆéûÇ…àÍìxÇæÇØåƒÇŒÇÍÇÈ
 	//-----------------------------------------------------
 	//----ñÓë„----
-	
+	SOUND("Title")->Load("Sound/Star04.wav", 1);
+	SOUND("Game")->Load("Sound/Star01.wav", 1);
+	SOUND("Result")->Load("Sound/Star02.wav", 1);
 	 
 	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri02.png"));
 	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad02.png"));
@@ -152,9 +154,6 @@ void Init(void)
 	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/penta0.png"));
 	ADD_RESOURCE("Result", CImage::CreateImage("Image/result.png"));
 	ADD_RESOURCE("MiniStar", CImage::CreateImage("Image/nomal1.png"));
-
-
-
 
 
 	//----ëÂèü----

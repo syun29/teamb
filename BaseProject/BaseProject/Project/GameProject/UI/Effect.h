@@ -22,7 +22,6 @@ public:
 	static TexAnimData ANIM_DATA[];
 
 	CImage m_img;
-	CVector3D m_pos;
 	CVector3D m_vec;
 	CVector2D m_size;
 	float alpfa;

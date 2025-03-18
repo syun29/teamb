@@ -59,12 +59,13 @@ void Nomal::Collision(Task* b)
 		{
 			Kill();
 			Score::AddScore(100);
+
 			new Effect("Effect_Get", CVector3D(m_pos));
 			for (int i=0; i < 10; i++) {
-				CVector3D v(Utility::Rand(0.0f, 10.0f),
-					Utility::Rand(0.0f, 10.0f),
-					Utility::Rand(0.0f, 10.0f));
-				new PerticleEffect("MiniStar", CVector3D(m_pos), v, CVector2D(50, 50));
+				CVector3D v(Utility::Rand(-5.0f, 5.0f),
+					Utility::Rand(8.0f, .10f),
+					Utility::Rand(0.0f, 0.0f));
+				new PerticleEffect("MiniStar", CVector3D(m_pos),v, CVector2D(50, 50));
 			}
 		}
 	}
