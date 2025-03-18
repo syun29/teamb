@@ -8,7 +8,7 @@
 #include "Game/SterManager.h"
 #include "Game/Constellation_Star.h"
 #include"UI/Timer.h"
-
+#include"UI/Effect.h"
 #include"Title/Title.h"
 #include "Game/Constellation_Star.h"
 #include "Game/Game.h"
@@ -145,13 +145,13 @@ void Init(void)
 	/*new Enemy(
 		CVector3D(2500.0f, 0.0f, 100.0f), CVector3D(20.0f, 20.0f, 20.0f), CVector3D(20.0f, 20.0f, 20.0f));*/
 	
-	ADD_RESOURCE("Effect_Get", CImage::CreateImage("Image/09.png"),Effect::ANIM_DATA, 64*2, 64*2);
+	ADD_RESOURCE("Effect_Get", CImage::CreateImage("Image/09.png",Effect::ANIM_DATA, 32, 32));
 	//new SterManager;
 	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/tri0.png"));
 	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/quad0.png"));
 	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/penta0.png"));
 	ADD_RESOURCE("Result", CImage::CreateImage("Image/result.png"));
-	
+	ADD_RESOURCE("MiniStar", CImage::CreateImage("Image/nomal1.png"));
 
 
 
