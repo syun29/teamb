@@ -158,14 +158,14 @@ void Init(void)
 
 	//----ëÂèü----
 
-	ADD_RESOURCE("Player", CImage::CreateImage("Image/player.png",Player::ANIM_DATA,260,260));
+	ADD_RESOURCE("Player", CImage::CreateImage("Image/charactor1.png",Player::ANIM_DATA,260,260));
 
-	ADD_RESOURCE("Nomal", CImage::CreateImage("Image/nomal.png",Nomal::ANIM_DATA,137,137));
+	ADD_RESOURCE("Nomal", CImage::CreateImage("Image/Nomal2.png",Nomal::ANIM_DATA,137,137));
 
 	ADD_RESOURCE("Timer", CImage::CreateImage("Image/gauge2.png"));
 
-	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/Field1.png"));
-	ADD_RESOURCE("Ground", CImage::CreateImage("Image/Field2.png"));
+	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/background1.png"));
+	ADD_RESOURCE("Ground", CImage::CreateImage("Image/ground1.png"));
 
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 	ADD_RESOURCE("Load", CImage::CreateImage("Image/Road1.png"));

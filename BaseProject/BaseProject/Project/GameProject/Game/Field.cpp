@@ -9,13 +9,20 @@ Field::Field(const CVector3D& pos)
 }
 void Field::Update()
 {
-	m_backgroundscroll += 0.5;
+	m_backgroundscroll += 0.2;
 }
 
 void Field::Render()
 {
 	float sc;
 	sc = m_backgroundscroll;
+
+	/*float b = 0;
+	b = sc / (5500 / 2);
+	m_backGround.SetAng(b);
+	m_backGround.SetSize(1920*2,1080*2);
+	m_backGround.SetPos(0,0);
+	m_backGround.SetCenter(1920/2,1080/2);*/
 	m_backGround.SetRect(sc, 0, sc + 1920, 1080);
 	m_backGround.Draw();
 	

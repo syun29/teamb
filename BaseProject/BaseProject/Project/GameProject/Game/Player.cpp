@@ -1,7 +1,7 @@
 #include"Player.h"
 
-#define CHIP_SIZE 260 //1コマのサイズ
-#define CENTER_POS CVector2D(128.0f,280.0f) //中心座標
+#define CHIP_SIZE 256 //1コマのサイズ
+#define CENTER_POS CVector2D(128.0f,160.0f) //中心座標
 #define MOVE_SPEED_X 3.0f*2.0f//横方向の移動速度
 #define MOVE_SPEED_Z 1.0f*2.0f //奥方向の移動速度
 #define JUMP_SPEED 17.0f	// ジャンプ速度
