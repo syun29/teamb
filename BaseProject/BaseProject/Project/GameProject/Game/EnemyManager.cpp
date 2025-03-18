@@ -2,7 +2,7 @@
 #include "Enemy.h"
 EnemyManager::EnemyManager()
 	:time(60 * 60)
-	, enemyTimer(60 * 2)
+	, enemyTimer(60 * 0.3)
 	, ObjectBase(eType_Enemy)
 	
 
@@ -33,7 +33,7 @@ void EnemyManager::Update()
 
 		
 			
-			enemyTimer = 60 * 2;
+			enemyTimer = 60 * 0.3;
 		}
 	}
 }

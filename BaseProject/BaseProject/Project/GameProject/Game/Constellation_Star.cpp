@@ -7,9 +7,9 @@ TexAnimData Constellation_Star::ANIM_DATA[4] =
 	{
 		new TexAnim[3]
 	{
-		{0,12},{1,12},
+		{0,12},{1,12},{3,12}
 		},
-		2
+		3
 		},
 };
 
@@ -49,7 +49,7 @@ void Constellation_Star::Render()
 	CVector2D size = CalcScreenSize(CVector2D(100, 100));
 	m_img.SetSize(size);
 	m_img.SetCenter(size.x / 2, size.y);
-	m_img.SetRect(64, 128, 64, 0);
+	m_img.SetRect(0, 128, 128, 128*2);
 	m_img.Draw();
 	RenderCubu();
 }
