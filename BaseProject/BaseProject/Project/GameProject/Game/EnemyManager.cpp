@@ -4,8 +4,8 @@ EnemyManager::EnemyManager()
 	:time(60 * 60)
 	, enemyTimer(60 * 3)
 	, ObjectBase(eType_Enemy)
-	,enemySwitch(0)
-	,enemyCnt(1)
+	,enemySwitch(true)
+	,enemyCnt(0)
 
 {
 
@@ -21,28 +21,33 @@ EnemyManager::~EnemyManager()
 void EnemyManager::Update()
 {
 	time--;
-	if (time % (10*enemyCnt*60) == 0) {
+	if (time % (10*60) == 0) {
 		
-		enemySwitch+=enemyCnt;
+		enemySwitch=false;
 		enemyCnt++;
 	}
 	
 	enemyTimer--;
 	if (time >= 0) {
-		if (enemySwitch == 1) {
-			for (int i = 0; i < 5; i++) {
-				new Enemy(CVector3D(1920.0f + m_scroll.x, 0.0f, -50+ 50* i), CVector3D(64.0f, 100.0f, 20.0f), CVector3D(64.0f, -30.0f, 20.0f), 0);
+		if (enemySwitch == false) {
+			if (enemyCnt == 1) {
+				for (int i = 0; i < 5; i++) {
+					new Enemy(CVector3D(1920.0f + m_scroll.x, 0.0f, -50 + 50 * i), CVector3D(64.0f, 100.0f, 20.0f), CVector3D(64.0f, -30.0f, 20.0f), 0);
+				}
+				enemySwitch = true;
 			}
-			enemySwitch = 0;
-		}
-		if (enemySwitch == 2) {
-			for (int i = 0; i < 5; i++) {
-				new Enemy(CVector3D(0.0f - m_scroll.x, 0.0f, -50 + 50 * i), CVector3D(64.0f, 100.0f, 20.0f), CVector3D(64.0f, -30.0f, 20.0f), 4);
+			if (enemyCnt == 2) {
+				for (int i = 0; i < 5; i++) {
+					new Enemy(CVector3D(0.0f - m_scroll.x, 0.0f, -50 + 50 * i), CVector3D(64.0f, 100.0f, 20.0f), CVector3D(64.0f, -30.0f, 20.0f), 4);
+				}
+				enemySwitch = true;
 			}
-			enemySwitch = 0;
+			if (enemyCnt >= 3) {
+				enemySwitch = true;
+			}
 		}
 		if (enemyTimer < 0) {
-			if (enemySwitch == 0) {
+			if (enemySwitch == true) {
 				int newRand = rand() % 4;
 
 				CVector3D pos(Utility::Rand(1920.0f + m_scroll.x, 1920.f + m_scroll.x),
