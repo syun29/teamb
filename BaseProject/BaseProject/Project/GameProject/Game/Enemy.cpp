@@ -77,7 +77,7 @@ void Enemy::Update()
 	}
 	if (type == 4) {
 		m_pos.x += 10.0f;
-		m_img.SetFlipH(false);
+		m_img.SetFlipH(true);
 	}
 	m_img.UpdateAnimation();
 
