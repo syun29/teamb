@@ -1,7 +1,11 @@
-﻿Enemy.obj : warning LNK4099: PDB '' が 'Enemy.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-EnemyManager.obj : warning LNK4099: PDB '' が 'EnemyManager.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-Game.obj : warning LNK4099: PDB '' が 'Game.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-main.obj : warning LNK4099: PDB '' が 'main.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+﻿  Constellation_Star.cpp
+  Nomal.cpp
+  SterManager.cpp
+  Title.cpp
+  Effect.cpp
+C:\教材\teamb\BaseProject\BaseProject\Project\GameProject\UI\Effect.cpp(73,18): warning C4305: '*=': 'double' から 'float' へ切り詰めます。
+  main.cpp
+  コードを生成中...
 glfw.lib(init.obj) : warning LNK4099: PDB '' が 'glfw.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(window.obj) : warning LNK4099: PDB '' が 'glfw.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(input.obj) : warning LNK4099: PDB '' が 'glfw.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -17,13 +21,9 @@ glfw.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'glfw.lib(win32_joyst
 glfw.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'glfw.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(egl_context.obj) : warning LNK4099: PDB '' が 'glfw.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
   glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
-     ライブラリ C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\/../Game/GameProject.lib とオブジェクト C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\/../Game/GameProject.exp を作成中
+     ライブラリ C:\教材\teamb\BaseProject\BaseProject\Project\/../Game/GameProject.lib とオブジェクト C:\教材\teamb\BaseProject\BaseProject\Project\/../Game/GameProject.exp を作成中
   コード生成しています。
   コード生成が終了しました。
-Enemy.obj : warning LNK4099: PDB '' が 'Enemy.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-EnemyManager.obj : warning LNK4099: PDB '' が 'EnemyManager.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-Game.obj : warning LNK4099: PDB '' が 'Game.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-main.obj : warning LNK4099: PDB '' が 'main.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(init.obj) : warning LNK4099: PDB '' が 'glfw.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(window.obj) : warning LNK4099: PDB '' が 'glfw.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(input.obj) : warning LNK4099: PDB '' が 'glfw.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -81,18 +81,4 @@ LINK : warning LNK4199: /DELAYLOAD:PhysX_64.dll は無視されます。PhysX_64
 LINK : warning LNK4199: /DELAYLOAD:PhysXCommon_64.dll は無視されます。PhysXCommon_64.dll にインポートがありません。
 LINK : warning LNK4199: /DELAYLOAD:PhysXCooking_64.dll は無視されます。PhysXCooking_64.dll にインポートがありません。
 LINK : warning LNK4199: /DELAYLOAD:PhysXFoundation_64.dll は無視されます。PhysXFoundation_64.dll にインポートがありません。
-ObjectBase.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-SterManager.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-SterManager.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-opengl32.lib(OPENGL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-opengl32.lib(OPENGL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-opengl32.lib(OPENGL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CFPS.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CRect.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CRect.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CResource.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CShadow.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-kernel32.lib(KERNEL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-kernel32.lib(KERNEL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-kernel32.lib(KERNEL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CLight.obj) : fatal error LNK1103: デバッグ情報が壊れています。モジュールを再コンパイルしてください。
+  GameProject.vcxproj -> C:\教材\teamb\BaseProject\BaseProject\Game\GameProject.exe

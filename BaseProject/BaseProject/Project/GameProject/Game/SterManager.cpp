@@ -46,7 +46,7 @@ SterManager::SterManager()
 			CVector3D pos(Utility::Rand(300.0f, 9000.f),
 				Utility::Rand(50.0f, 250.0f),
 				Utility::Rand(0.0f, 100.0f));
-				new Constellation_Star(pos, CVector3D(50, 100, 30), CVector3D(50, 0, 30), j);
+				new Constellation_Star(pos, CVector3D(65, 150, 30), CVector3D(65, -40, 30), j);
 		}
 	}
 }

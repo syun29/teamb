@@ -135,12 +135,12 @@ void Init(void)
 	SOUND("Game")->Load("Sound/Star01.wav", 1);
 	SOUND("Result")->Load("Sound/Star02.wav", 1);
 	 
-	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri00.png"));
-	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad00.png"));
-	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta00.png",Constellation_Star::ANIM_DATA,128,128));
+	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri00.png", Constellation_Star::ANIM_DATA, 280, 280));
+	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad00.png", Constellation_Star::ANIM_DATA, 280, 280));
+	ADD_RESOURCE("penta", CImage::CreateImage("Image/penta00.png",Constellation_Star::ANIM_DATA,280,280));
 
 	ADD_RESOURCE("Score", CImage::CreateImage("Image/Score01.png"));
-	
+	ADD_RESOURCE("TitleEffect", CImage::CreateImage("Image/starmove.png"));
 
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png", Enemy::ANIM_DATA, 256, 256));
 	
@@ -149,9 +149,9 @@ void Init(void)
 	
 	ADD_RESOURCE("Effect_Get", CImage::CreateImage("Image/09.png",Effect::ANIM_DATA, 32, 32));
 	//new SterManager;
-	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/tri0.png"));
-	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/quad0.png"));
-	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/penta0.png"));
+	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/Tri.png"));
+	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/Quad.png"));
+	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/Penta.png"));
 	ADD_RESOURCE("Result", CImage::CreateImage("Image/result.png"));
 	ADD_RESOURCE("MiniStar", CImage::CreateImage("Image/nomal1.png"));
 

@@ -1,6 +1,7 @@
 #include "Title.h"
 #include "Game/Game.h"
 #include"Load.h"
+#include"UI/Effect.h"
 Title::Title()
 	:ObjectBase(eType_Title)
 	,m_cnt(0)

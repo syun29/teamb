@@ -86,3 +86,30 @@ void PerticleEffect::Render()
 	m_img.Draw();
 
 }
+
+TitleEffect::TitleEffect(const char* name, const CVector3D& pos)
+	:ObjectBase(pos, eType_Effect)
+
+{
+	m_img = COPY_RESOURCE(name, CImage);
+
+}
+
+TitleEffect::~TitleEffect()
+{
+}
+
+void TitleEffect::Update()
+{
+	m_pos.x -= 10.0f;
+	m_pos.y += 10.0f;
+}
+
+void TitleEffect::Render()
+{
+	m_img.SetPos(CalcScreenPos());
+	m_img.SetCenter(250,250);
+	m_img.SetSize(100,100);
+	m_img.Draw();
+
+}

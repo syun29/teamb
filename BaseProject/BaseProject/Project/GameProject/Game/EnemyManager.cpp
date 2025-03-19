@@ -38,11 +38,17 @@ void EnemyManager::Update()
 			}
 			if (enemyCnt == 2) {
 				for (int i = 0; i < 5; i++) {
-					new Enemy(CVector3D(0.0f - m_scroll.x, 0.0f, -50 + 50 * i), CVector3D(64.0f, 100.0f, 20.0f), CVector3D(64.0f, -30.0f, 20.0f), 4);
+					new Enemy(CVector3D(0.0f + m_scroll.x, 0.0f, -50 + 50 * i), CVector3D(64.0f, 100.0f, 20.0f), CVector3D(64.0f, -30.0f, 20.0f), 5);
 				}
 				enemySwitch = true;
 			}
-			if (enemyCnt >= 3) {
+			if (enemyCnt == 3) {
+				for (int i = 0; i < 5; i++) {
+					new Enemy(CVector3D(1920.0f + m_scroll.x, 0.0f, -150 + 100 * i), CVector3D(64.0f, 100.0f, 20.0f), CVector3D(64.0f, -30.0f, 20.0f), 4);
+					enemySwitch = true;
+				}
+			}
+			if (enemyCnt >= 4) {
 				enemySwitch = true;
 			}
 		}
@@ -58,7 +64,7 @@ void EnemyManager::Update()
 
 
 
-				enemyTimer = 60 * 3;
+				enemyTimer = 60 * 1.5;
 			}
 		}
 		

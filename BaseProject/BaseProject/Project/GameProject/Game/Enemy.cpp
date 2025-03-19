@@ -75,7 +75,22 @@ void Enemy::Update()
 			enemySwitch_z = true;
 		}
 	}
+	
 	if (type == 4) {
+		if (enemySwitch_y == true) {
+			m_pos.y += MOVE_SPEED_Y;
+		}
+		if (m_pos.y >= 300) {
+			enemySwitch_y = false;
+		}
+		if (enemySwitch_y == false) {
+			m_pos.y -= MOVE_SPEED_Y;
+		}
+		if (m_pos.y <= 0) {
+			enemySwitch_y = true;
+		}
+	}
+	if (type == 5) {
 		m_pos.x += 10.0f;
 		m_img.SetFlipH(true);
 	}

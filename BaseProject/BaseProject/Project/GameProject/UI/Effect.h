@@ -29,3 +29,12 @@ public:
 	void Update();
 	void Render();
 };
+class TitleEffect :public ObjectBase
+{
+public:
+	TitleEffect(const char* name, const CVector3D& pos);
+		~TitleEffect();
+		CImage m_img;
+		void Update();
+		void Render();
+};
