@@ -160,7 +160,7 @@ void Init(void)
 
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/charactor1.png",Player::ANIM_DATA,260,260));
 
-	ADD_RESOURCE("Nomal", CImage::CreateImage("Image/Nomal2.png",Nomal::ANIM_DATA,137,137));
+	ADD_RESOURCE("Nomal", CImage::CreateImage("Image/Nomalstar2.png",Nomal::ANIM_DATA,137,137));
 
 	ADD_RESOURCE("Timer", CImage::CreateImage("Image/gauge2.png"));
 
