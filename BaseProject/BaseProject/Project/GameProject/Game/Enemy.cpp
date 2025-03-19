@@ -75,6 +75,9 @@ void Enemy::Update()
 			enemySwitch_z = true;
 		}
 	}
+	if (type == 4) {
+		m_pos.x += MOVE_SPEED_X;
+	}
 	m_img.UpdateAnimation();
 
 }
