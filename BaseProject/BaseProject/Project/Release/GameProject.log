@@ -1,7 +1,48 @@
-﻿Enemy.obj : warning LNK4099: PDB '' が 'Enemy.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-EnemyManager.obj : warning LNK4099: PDB '' が 'EnemyManager.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-Game.obj : warning LNK4099: PDB '' が 'Game.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-main.obj : warning LNK4099: PDB '' が 'main.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+﻿  Constellation.cpp
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(59,35): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(59,22): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(63,37): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(63,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(64,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(64,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(67,37): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(67,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(68,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Constellation.cpp(68,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+  Constellation_Star.cpp
+  Enemy.cpp
+  EnemyManager.cpp
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\EnemyManager.cpp(35,58): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\EnemyManager.cpp(41,55): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  Field.cpp
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Field.cpp(12,27): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  Game.cpp
+  Nomal.cpp
+  Player.cpp
+  Result.cpp
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Result.cpp(38,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Result.cpp(38,27): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\Game\Result.cpp(40,26): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  SterManager.cpp
+  main.cpp
+  ObjectBase.cpp
+  StarBase.cpp
+  Task.cpp
+  TaskManager.cpp
+  Load.cpp
+  Title.cpp
+  Effect.cpp
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\UI\Effect.cpp(73,18): warning C4305: '*=': 'double' から 'float' へ切り詰めます。
+  Score.cpp
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\UI\Score.cpp(20,34): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\UI\Score.cpp(20,20): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\UI\Score.cpp(22,21): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  Timer.cpp
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\UI\Timer.cpp(42,16): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\UI\Timer.cpp(43,22): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\UI\Timer.cpp(49,16): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\GameProject\UI\Timer.cpp(50,23): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  コードを生成中...
 glfw.lib(init.obj) : warning LNK4099: PDB '' が 'glfw.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(window.obj) : warning LNK4099: PDB '' が 'glfw.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(input.obj) : warning LNK4099: PDB '' が 'glfw.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -20,10 +61,6 @@ glfw.lib(egl_context.obj) : warning LNK4099: PDB '' が 'glfw.lib(egl_context.ob
      ライブラリ C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\/../Game/GameProject.lib とオブジェクト C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Project\/../Game/GameProject.exp を作成中
   コード生成しています。
   コード生成が終了しました。
-Enemy.obj : warning LNK4099: PDB '' が 'Enemy.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-EnemyManager.obj : warning LNK4099: PDB '' が 'EnemyManager.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-Game.obj : warning LNK4099: PDB '' が 'Game.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-main.obj : warning LNK4099: PDB '' が 'main.obj' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(init.obj) : warning LNK4099: PDB '' が 'glfw.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(window.obj) : warning LNK4099: PDB '' が 'glfw.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 glfw.lib(input.obj) : warning LNK4099: PDB '' が 'glfw.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -81,18 +118,4 @@ LINK : warning LNK4199: /DELAYLOAD:PhysX_64.dll は無視されます。PhysX_64
 LINK : warning LNK4199: /DELAYLOAD:PhysXCommon_64.dll は無視されます。PhysXCommon_64.dll にインポートがありません。
 LINK : warning LNK4199: /DELAYLOAD:PhysXCooking_64.dll は無視されます。PhysXCooking_64.dll にインポートがありません。
 LINK : warning LNK4199: /DELAYLOAD:PhysXFoundation_64.dll は無視されます。PhysXFoundation_64.dll にインポートがありません。
-ObjectBase.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-SterManager.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-SterManager.obj : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-opengl32.lib(OPENGL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-opengl32.lib(OPENGL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-opengl32.lib(OPENGL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CFPS.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CRect.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CRect.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CResource.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CShadow.obj) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-kernel32.lib(KERNEL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-kernel32.lib(KERNEL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-kernel32.lib(KERNEL32.dll) : warning LNK4020: '' の型レコードは破損しています。一部のシンボルおよび型は、デバッガーからはアクセスできない可能性があります。
-GLLibrary.lib(CLight.obj) : fatal error LNK1103: デバッグ情報が壊れています。モジュールを再コンパイルしてください。
+  GameProject.vcxproj -> C:\Users\Owner\Desktop\team\teamb\BaseProject\BaseProject\Game\GameProject.exe
