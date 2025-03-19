@@ -37,7 +37,7 @@ void EnemyManager::Update()
 		}
 		if (enemySwitch == 2) {
 			for (int i = 0; i < 5; i++) {
-				new Enemy(CVector3D(0.0f - m_scroll.x, 0.0f, -50 + 50 * i), CVector3D(64.0f, 100.0f, 20.0f), CVector3D(64.0f, -30.0f, 20.0f), 0);
+				new Enemy(CVector3D(0.0f - m_scroll.x, 0.0f, -50 + 50 * i), CVector3D(64.0f, 100.0f, 20.0f), CVector3D(64.0f, -30.0f, 20.0f), 4);
 			}
 			enemySwitch = 0;
 		}
