@@ -1,5 +1,6 @@
 #include "Enemy.h"
 #include "UI/Score.h"
+#include"UI/Timer.h"
 #define CHIP_SIZE 24 
 #define CENTER_POS CVector3D(12.0f,12.0f) 
 #define MOVE_SPEED_X 5.0f*2.0f 
@@ -122,7 +123,7 @@ void Enemy::Collision(Task*b)
 			Kill();
 			
 			Score::DownScore(500);
-			
+			Timer::downTime(5);
 			
 		}
 		

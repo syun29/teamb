@@ -18,13 +18,16 @@ enum {
 //タスクの優先度の種類
 enum class ETaskPrio
 {
+	Title,
 	Result,
+	EnemyManager,
 	Game,
 	Field, //フィールド
 	Nomal,
 	Shadow, //影
 	Object, //オブジェクト（プレイヤーとか敵とか）
 	UI,
+	
 	Effect,
 };
 class Task

@@ -1,8 +1,8 @@
 #pragma once
-#include"../System/ObjectBase.h"
+#include"../System/Task.h"
 
 
-class EnemyManager:public ObjectBase
+class EnemyManager:public Task
 {
 public:
 	EnemyManager();

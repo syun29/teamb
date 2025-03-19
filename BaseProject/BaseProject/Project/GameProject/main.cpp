@@ -168,7 +168,7 @@ void Init(void)
 	ADD_RESOURCE("Ground", CImage::CreateImage("Image/ground1.png"));
 
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
-	ADD_RESOURCE("Load", CImage::CreateImage("Image/Road1.png"));
+	ADD_RESOURCE("Load", CImage::CreateImage("Image/Load.png"));
 
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨
 	

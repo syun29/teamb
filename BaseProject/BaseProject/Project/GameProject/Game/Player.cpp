@@ -12,11 +12,11 @@ TexAnimData Player::ANIM_DATA[4] =
 {
 	//待機アニメーション
 	{
-		new TexAnim[2]
+		new TexAnim[1]
 	{
-		{15,12},{16,12},
+		{15,12},
 	},
-	2
+	1
 },
 	//移動アニメーション
 	{

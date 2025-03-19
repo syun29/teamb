@@ -1,11 +1,10 @@
 #pragma once
-#include"System/ObjectBase.h"
+#include"System/Task.h"
 
-class Title :public ObjectBase {
+class Title :public Task {
 	CImage m_img;
-
 	int m_cnt;
-
+	int m_moveCnt;
 public:
 	Title();
 	void Update();

@@ -14,7 +14,7 @@ void Score::Update()
 void Score::Render()
 {
 	int score = s_score;
-	for (int i = 0; i < 6; i++,score/=10)
+	for (int i = 0; i < 4; i++,score/=10)
 	{
 		int s =score % 10;
 		m_img.SetRect(102*s, 0,  102*s + 102, 169);

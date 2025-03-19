@@ -1,6 +1,7 @@
 #include "SterManager.h"
 #include "Constellation_Star.h"
 #include"Nomal.h"
+#include"Constellation.h"
 struct StarData {
 	CVector3D pos;
 	int type;
@@ -47,6 +48,26 @@ SterManager::SterManager()
 				Utility::Rand(50.0f, 250.0f),
 				Utility::Rand(0.0f, 100.0f));
 				new Constellation_Star(pos, CVector3D(65, 150, 30), CVector3D(65, -40, 30), j);
+		}
+	}
+	if (Constellation::starCnt[0] == 4 && Constellation::starCnt[1] == 5 && Constellation::starCnt[2] == 6)
+	{
+		for (int i = 0; i < 10; i++) {
+			CVector3D pos(Utility::Rand(300.0f, 9000.f),
+				Utility::Rand(0.0f, 150.0f),
+				Utility::Rand(0.0f, 100.0f));
+			new Nomal(pos, CVector3D(50, 200, 50), CVector3D(50, -100, 50));
+		}
+		for (int j = 0; j < 3; j++) {
+			for (int i = 0; i < j + 3; i++) {
+				CVector3D pos(Utility::Rand(300.0f, 9000.f),
+					Utility::Rand(50.0f, 250.0f),
+					Utility::Rand(0.0f, 100.0f));
+				new Constellation_Star(pos, CVector3D(65, 150, 30), CVector3D(65, -40, 30), j);
+			}
+		}
+		for (int i = 0; i < 3; i++) {
+			Constellation::starCnt[i] = 0;
 		}
 	}
 }

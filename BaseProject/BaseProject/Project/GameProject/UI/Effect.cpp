@@ -102,7 +102,7 @@ TitleEffect::~TitleEffect()
 void TitleEffect::Update()
 {
 	m_pos.x -= 10.0f;
-	m_pos.y += 10.0f;
+	m_pos.y -= 10.0f;
 }
 
 void TitleEffect::Render()

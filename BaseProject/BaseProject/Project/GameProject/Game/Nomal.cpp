@@ -1,6 +1,7 @@
 #include "Nomal.h"
 #include"UI/Score.h"
 #include "UI/Effect.h"
+#include "UI/Timer.h"
 #define CHIP_SIZE 137
 #define CENTER_POS CVector3D(68.0f,130.0f)
 
@@ -66,6 +67,12 @@ void Nomal::Collision(Task* b)
 					Utility::Rand(8.0f, 20.0f),
 					Utility::Rand(0.0f, 0.0f));
 				new PerticleEffect("MiniStar", CVector3D(m_pos),v, CVector2D(50, 50));
+				Timer::timeCnt += 5;
+				if (Timer::timeCnt >= Timer::time_Max) {
+					Timer::resetTime();
+
+				}
+
 			}
 		}
 	}

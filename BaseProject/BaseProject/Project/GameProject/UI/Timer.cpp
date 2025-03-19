@@ -14,6 +14,11 @@ void Timer::resetTime()
 	timeCnt = time_Max = 60 * 60;
 }
 
+void Timer::downTime(int down)
+{
+	timeCnt -= down;
+}
+
 Timer::Timer()
 	:ObjectBase(eType_Timer)
 {
