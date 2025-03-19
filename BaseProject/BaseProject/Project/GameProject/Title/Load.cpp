@@ -9,7 +9,7 @@ Load::Load()
 
 void Load::Update()
 {
-	if (m_cnt++ > 60 * 5) {
+	if (m_cnt++ > 60 * 2) {
 		Kill();
 		new Game();
 		SOUND("Game")->Play();

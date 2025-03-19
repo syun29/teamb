@@ -142,7 +142,7 @@ void Init(void)
 	ADD_RESOURCE("Score", CImage::CreateImage("Image/Score01.png"));
 	
 
-	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/UFO.25.png"));
+	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png", Enemy::ANIM_DATA, 256, 256));
 	
 	/*new Enemy(
 		CVector3D(2500.0f, 0.0f, 100.0f), CVector3D(20.0f, 20.0f, 20.0f), CVector3D(20.0f, 20.0f, 20.0f));*/

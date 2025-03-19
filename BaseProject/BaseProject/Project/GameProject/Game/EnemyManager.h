@@ -8,6 +8,8 @@ public:
 	EnemyManager();
 	~EnemyManager();
 	int time;
+	int enemySwitch;
+	int enemyCnt;
 	int enemyTimer;
 	void Update();
 };
