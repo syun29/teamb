@@ -6,6 +6,17 @@
 #define MOVE_SPEED_Y 3.0f*2.0f 
 #define MOVE_SPEED_Z 5.0f*2.0f 
 
+TexAnimData Enemy::ANIM_DATA[1] =
+{
+
+	{
+		new TexAnim[2]
+	{
+		{0,12},{1,12},
+	},
+	2
+	}
+};
 
 Enemy::Enemy(const CVector3D& pos, CVector3D& cubeMax, CVector3D& cubeMin, int types)
 	:ObjectBase(pos, eType_Enemy)
@@ -50,20 +61,22 @@ void Enemy::Update()
 	}
 	if (type == 3) {
 		if (enemySwitch_z == true) {
-			m_pos.x -= MOVE_SPEED_X;
-			m_pos.z += MOVE_SPEED_Z;
+			m_pos.x -= 2.5f;
+			m_pos.z += 2.0f;
 		}
 		if (m_pos.z >= 200) {
 			enemySwitch_z = false;
 		}
 		if (enemySwitch_z == false) {
-			m_pos.x -= MOVE_SPEED_X;
-			m_pos.z -= MOVE_SPEED_Z;
+			m_pos.x -= 2.5f;
+			m_pos.z -= 2.0f;
 		}
 		if (m_pos.z <= -50) {
 			enemySwitch_z = true;
 		}
 	}
+	m_img.UpdateAnimation();
+
 }
 
 void Enemy::Render()
@@ -71,7 +84,7 @@ void Enemy::Render()
 	//m_img.SetPos(GetScreenPos(m_pos));
 
 	m_img.SetPos(CalcScreenPos());
-	CVector2D size = CalcScreenSize(CVector2D(120, 120));
+	CVector2D size = CalcScreenSize(CVector2D(128, 128));
 	m_img.SetSize(size);
 	m_img.SetCenter(size.x / 2, size.y);
 	m_img.Draw();

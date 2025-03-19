@@ -17,6 +17,7 @@ public:
 	int type;
 	bool enemySwitch_y;
 	bool enemySwitch_z;
+	static TexAnimData ANIM_DATA[];
 
 private:
 	//static TexAnimData ANIM_DATA[];
