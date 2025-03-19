@@ -50,6 +50,17 @@ SterManager::SterManager()
 				new Constellation_Star(pos, CVector3D(65, 150, 30), CVector3D(65, -40, 30), j);
 		}
 	}
+	
+	
+}
+
+SterManager::~SterManager()
+{
+}
+
+void SterManager::Update()
+{
+	
 	if (Constellation::starCnt[0] == 4 && Constellation::starCnt[1] == 5 && Constellation::starCnt[2] == 6)
 	{
 		for (int i = 0; i < 10; i++) {
@@ -70,17 +81,6 @@ SterManager::SterManager()
 			Constellation::starCnt[i] = 0;
 		}
 	}
-}
-
-SterManager::~SterManager()
-{
-}
-
-void SterManager::Update()
-{
-	
-		
-	
 	 
 }
 
