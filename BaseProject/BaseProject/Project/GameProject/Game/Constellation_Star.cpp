@@ -80,6 +80,7 @@ void Constellation_Star::Collision(Task* b)
 			Kill();
 			Constellation::starCnt[kind]++;
 			Score::AddScore(100);
+			SOUND("Get")->Play();
 			new Effect("Effect_Get", CVector3D(m_pos));
 			for (int i = 0; i < 10; i++) {
 				CVector3D v(Utility::Rand(-5.0f, 5.0f),

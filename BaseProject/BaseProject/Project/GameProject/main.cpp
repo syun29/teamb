@@ -134,6 +134,8 @@ void Init(void)
 	SOUND("Title")->Load("Sound/Star04.wav", 1);
 	SOUND("Game")->Load("Sound/Star01.wav", 1);
 	SOUND("Result")->Load("Sound/Star02.wav", 1);
+	SOUND("Get")->Load("Sound/StarGet.wav", 1);
+	SOUND("Constellation")->Load("Sound/Star.wav", 1);
 	 
 	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri00.png", Constellation_Star::ANIM_DATA, 280, 280));
 	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad00.png", Constellation_Star::ANIM_DATA, 280, 280));
@@ -152,7 +154,7 @@ void Init(void)
 	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/Tri.png"));
 	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/Quad.png"));
 	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/Penta.png"));
-	ADD_RESOURCE("Result", CImage::CreateImage("Image/result.png"));
+	ADD_RESOURCE("Result", CImage::CreateImage("Image/ReResult.png"));
 	ADD_RESOURCE("MiniStar", CImage::CreateImage("Image/nomal1.png"));
 
 
@@ -167,7 +169,7 @@ void Init(void)
 	ADD_RESOURCE("BackGround", CImage::CreateImage("Image/background1.png"));
 	ADD_RESOURCE("Ground", CImage::CreateImage("Image/ground1.png"));
 
-	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/ReTitle.png"));
 	ADD_RESOURCE("Load", CImage::CreateImage("Image/Load.png"));
 
 	//ÉvÉåÉCÉÑÅ[Çê∂ê¨

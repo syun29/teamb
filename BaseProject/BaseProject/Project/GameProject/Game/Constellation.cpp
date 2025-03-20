@@ -24,17 +24,20 @@ void Constellation::Update()
 	{
 		Score::AddScore(3000);
 		starCnt[0]=4;
+		SOUND("Constellation")->Play();
 	}
 	if (starCnt[1] == 4)
 	{
 		Score::AddScore(3000);
 		starCnt[1] = 5;
+		SOUND("Constellation")->Play();
 
 	}
 	if (starCnt[2] == 5)
 	{
 		Score::AddScore(3000);
 		starCnt[2] = 6;
+		SOUND("Constellation")->Play();
 
 	}
 

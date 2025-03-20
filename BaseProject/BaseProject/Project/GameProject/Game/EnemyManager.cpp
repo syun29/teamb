@@ -48,8 +48,8 @@ void EnemyManager::Update()
 					enemySwitch = true;
 				}
 			}
-			if (enemyCnt >= 4) {
-				enemySwitch = true;
+			if (enemyCnt == 4) {
+				enemyCnt = 0;
 			}
 		}
 		if (enemyTimer < 0) {
