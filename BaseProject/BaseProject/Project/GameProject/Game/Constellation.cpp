@@ -59,15 +59,15 @@ void Constellation::Render()
 		sc2 = 5;
 	}
 	m_img[0].SetPos(50,50);
-	m_img[0].SetRect(280*sc0, 0, 280 + sc0*280, 280);
+	m_img[0].SetRect(300*sc0, 0, 300 + sc0*300, 300);
 	m_img[0].SetSize(256, 256);
 	m_img[0].Draw();
 	m_img[1].SetPos(300,60);
-	m_img[1].SetRect(280 * sc1, 0, 280 +sc1*280, 280);
+	m_img[1].SetRect(300 * sc1, 0, 300 +sc1*300, 300);
 	m_img[1].SetSize(256, 256);
 	m_img[1].Draw();
 	m_img[2].SetPos(530, 60);
-	m_img[2].SetRect(280 * sc2, 0, 280 + sc2 * 280, 280);
+	m_img[2].SetRect(300 * sc2, 0, 300 + sc2 * 300, 300);
 	m_img[2].SetSize(256, 256);
 	m_img[2].Draw();
 }

@@ -156,9 +156,9 @@ void Init(void)
 	
 	ADD_RESOURCE("Effect_Get", CImage::CreateImage("Image/09.png",Effect::ANIM_DATA, 32, 32));
 	//new SterManager;
-	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/Tri.png"));
-	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/Quad.png"));
-	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/Penta.png"));
+	ADD_RESOURCE("Cons_Tri", CImage::CreateImage("Image/Tri3.png"));
+	ADD_RESOURCE("Cons_Quad", CImage::CreateImage("Image/Quad4.png"));
+	ADD_RESOURCE("Cons_Penta", CImage::CreateImage("Image/Penta5.png"));
 	ADD_RESOURCE("Result", CImage::CreateImage("Image/ReResult.png"));
 	ADD_RESOURCE("MiniStar", CImage::CreateImage("Image/nomal1.png"));
 
