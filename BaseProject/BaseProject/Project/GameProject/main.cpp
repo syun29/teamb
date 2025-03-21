@@ -131,11 +131,11 @@ void Init(void)
 	//ƒQ[ƒ€‹N“®‚Éˆê“x‚¾‚¯ŒÄ‚Î‚ê‚é
 	//-----------------------------------------------------
 	//----–î‘ã----
-	SOUND("Title")->Load("Sound/Star04.wav", 1);
-	SOUND("Game")->Load("Sound/Star01.wav", 1);
-	SOUND("Result")->Load("Sound/Star02.wav", 1);
+	SOUND("Title")->Load("Sound/Star003.wav", 1);
+	SOUND("Game")->Load("Sound/Star001.wav", 1);
+	SOUND("Result")->Load("Sound/Star002.wav", 1);
 	SOUND("Get")->Load("Sound/StarGet.wav", 1);
-	SOUND("Constellation")->Load("Sound/Star.wav", 1);
+	SOUND("Constellation")->Load("Sound/ReStar.wav", 1);
 	SOUND("Jump")->Load("Sound/Jump.wav", 1);
 	SOUND("Hit")->Load("Sound/Hit.wav", 1);
 	SOUND("StarGet")->Load("Sound/Get.wav", 1);
