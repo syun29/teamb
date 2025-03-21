@@ -135,6 +135,7 @@ void Player::StateIdle()
 	if (PUSH(CInput::eButton5))
 	{
 		ChangeState(EState::Jump);
+		SOUND("Jump")->Play();
 	}
 
 	/*else if (PUSH(CInput::eButton1))

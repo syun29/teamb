@@ -136,6 +136,11 @@ void Init(void)
 	SOUND("Result")->Load("Sound/Star02.wav", 1);
 	SOUND("Get")->Load("Sound/StarGet.wav", 1);
 	SOUND("Constellation")->Load("Sound/Star.wav", 1);
+	SOUND("Jump")->Load("Sound/Jump.wav", 1);
+	SOUND("Hit")->Load("Sound/Hit.wav", 1);
+	SOUND("StarGet")->Load("Sound/Get.wav", 1);
+	SOUND("StarGet2")->Load("Sound/Get2.wav", 1);
+
 	 
 	ADD_RESOURCE("tri", CImage::CreateImage("Image/tri00.png", Constellation_Star::ANIM_DATA, 280, 280));
 	ADD_RESOURCE("quad", CImage::CreateImage("Image/quad00.png", Constellation_Star::ANIM_DATA, 280, 280));

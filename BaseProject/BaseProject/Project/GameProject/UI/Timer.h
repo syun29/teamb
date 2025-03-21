@@ -8,7 +8,6 @@ class Timer:public ObjectBase
 public:
 	static int getTime();
 	static void resetTime();
-	static void downTime(int down);
 	//ゲージ用画像
 	CImage m_img;
 	//ゲージの幅

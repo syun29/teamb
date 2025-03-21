@@ -121,9 +121,9 @@ void Enemy::Collision(Task*b)
 		if (ObjectBase::CollisionCube(this, dynamic_cast<ObjectBase*>(b))) 
 		{
 			Kill();
-			
+			SOUND("Hit")->Play();
 			Score::DownScore(500);
-			Timer::downTime(5);
+			Timer::timeCnt-=10;
 			
 		}
 		
